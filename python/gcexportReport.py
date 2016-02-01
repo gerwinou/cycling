@@ -108,7 +108,7 @@ http_req(url_gc_post_auth + 'ticket=' + login_ticket)
 
 # We should be logged in now.
 
-csv_filename = '../data/activities.csv'
+csv_filename = '../../data/activities.csv'
 
 if csv_filename:
     timestamp = str(datetime.today())
