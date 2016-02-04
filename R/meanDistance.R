@@ -1,9 +1,9 @@
-setwd("~/Documents/Data Analysis/cycling")
+setwd("~/Documents/Data Analysis/")
 library(plyr)
 library(ggplot2)
 library(lubridate)
 
-garminReport <-"data/activities.csv"
+garminReport <-"data/cycling/activities.csv"
 temp <- read.csv(garminReport,sep=";",dec = ",",na.strings = "",header=T)
 
 temp$BeginTimestamp<-as.Date(temp$BeginTimestamp)

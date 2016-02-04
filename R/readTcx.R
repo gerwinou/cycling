@@ -1,7 +1,5 @@
-
-
 setwd("~/Documents/Data Analysis/")
-
+library(ggplot2)
 library(XML)
 filename <-"data/cycling/activity_1023323355.tcx"
 
@@ -20,11 +18,12 @@ df=as.data.frame(xmlToDataFrame(data))
 dev.off
     
 # with type, line, dot, step etc. can be configured
-plot(df$HeartRateBpm,type='n')
-title(main="Heartrate during ride",xlab("datapoints"),ylab("HeartRate"))
+plot(df$HeartRateBpm)
+title(main="Heartrate during ride")
+#,xlab("datapoints"),ylab("HeartRate"))
 #xlab("datapoints")
 #ylab("HeartRate")
-points(df$HeartRateBpm,col="blue",pch=1)
+  #points(df$HeartRateBpm,col="blue",pch=1)
 #points(df$Cadence,col="red",pch=8)
 #legend("topright",pch=c(17,8),col=c("blue","red"),legend=c("HR","Cadence"))
 
