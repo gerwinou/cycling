@@ -10,8 +10,14 @@ top <- xmlRoot(doc)
 # If there is only one lap in the file, the [[3]] should be replaced by a [[2]]
 
 # Another limitation is that position is not correctly recorded
-data=toString.XMLNode(top[[1]][[1]][[3]][[10]])
+track <- (top[[1]][[1]][[3]][[10]])
+data=toString.XMLNode(track)
+#data=toString.XMLNode(top[[1]][[1]][[3]][[10]])
+
 df=as.data.frame(xmlToDataFrame(data))
+
+data2=toString.XMLNode(track[[1]])
+df2=as.data.frame(xmlToDataFrame(data2))
 #with (df,plot(Cadence))
 #title(main="title")
   
