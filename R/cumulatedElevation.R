@@ -1,11 +1,11 @@
-setwd("~/Documents/Data Analysis/cycling")
+setwd("~/Documents/Data Analysis/")
 library(plyr)
 library(ggplot2)
 library(lubridate)
 
 # Note: some rows have no value, in this case the cumsum function stops at the last value, hence the plot stops there as well
 
-garminReport <-"data/activities.csv"
+garminReport <-"data/cycling/activities.csv"
 data <- read.csv(garminReport,sep=";",dec = ",",na.strings = "",header=T)
 
 data$BeginTimestamp<-as.Date(data$BeginTimestamp)
