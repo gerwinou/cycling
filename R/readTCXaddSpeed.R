@@ -4,7 +4,7 @@ library(XML)
 library(plyr)
 
 #filename <-"data/cycling/activity_1023323355.tcx" # Dijkrondje
-filename <-"data/cycling/activity_820645325.tcx" # Stelvia
+filename <-"data/cycling/activity_820645325.tcx" # Stelvio
 doc <- xmlParse(filename)
 
 nodes <- getNodeSet(doc, "//ns:Trackpoint", "ns")
