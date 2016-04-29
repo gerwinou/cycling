@@ -14,19 +14,19 @@ def retrieveAthlete( accessToken):
     params1 = dict(access_token=accessToken)
 
     a = requests.get(getAthlete,params1)
+    print(a.headers['X-RateLimit-Usage'])
     athlete = a.json()
 
     return athlete
 
-
-
-def retrieveActivities(accessToken,page,per_page=29):
+def retrieveActivities(accessToken,page,per_page=30):
     "Gets the activities for the current athlete"
     url = "https://www.strava.com/api/v3/athlete/activities/"
     # Page contains 30 records per page (0 based), page 11 is the last complete page, p 12 has data up to 28 records
-    params = dict(access_token=accessToken,page=1,per_page=per_page)
+    params = dict(access_token=accessToken,page=page,per_page=per_page)
 
     r = requests.get(url, params)
+    print(r.headers['X-RateLimit-Usage'])
     data = r.json()
 
     return data
@@ -39,18 +39,36 @@ def getClubs():
     "placeholder for a getClubs function"
     return
 
+def getCurrentRateLimit(at):
+    res = retrieveAthlete(at)
+    print(res['X-RateLimit-Usage'])
+    return
+
+def getNumberOfPages():
+
+    i = 1
+    d = retrieveActivities(at,i)
+    while (d != []):
+            d = retrieveActivities(at,i)
+            i = i + 1
+            if (d == []):
+                print('Reached the end of the data')
+    print (i)
+    return
+
+
 # Main part of the program
 
-a = retrieveAthlete(at)
-d = retrieveActivities(at,1,5)
+#retrieveAthlete(at)
+#getNumberOfPages()
 
+res = retrieveActivities(at,12)
+print(res)
 """
-print("The athlete is " + a['lastname'])
-
-print(d[1]['id']) # example for getting the id for record 1
-print(d[1]['name']) # example for getting the name for record 1
-print(d[1]['athlete']['resource_state']) # example for getting a nested value from record 1
-
-need to find how to count elements
-also need to find out how to refresh token etc.
+print(d[0]['id']) # example for getting the id for record 1
+print(d[0]['name']) # example for getting the name for record 1
+print(d[0]['athlete']['resource_state']) # example for getting a nested value from record 1
 """
+# need to find how to count elements: the above way is expensive in terms of API requests
+# also need to find out how to refresh token etc.
+
