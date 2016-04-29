@@ -1,32 +1,48 @@
 import requests
 import configparser
 
-# at = input("Enter the access token") Interactive input
-
+# Read in the config file. The configfile currently contains the access token
 config = configparser.ConfigParser()
 config.read('/Users/gb/strava.properties')
 
+# Get the access token from the config file
+at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
-at = (config.get('auth', 'auth.accessToken'))
+def retrieveAthlete( accessToken):
+    "Retrieves the data of the currently logged in user"
+    getAthlete = "https://www.strava.com/api/v3/athlete/"
+    params1 = dict(access_token=accessToken)
+
+    a = requests.get(getAthlete,params1)
+    athlete = a.json()
+
+    return athlete
 
 
-url = "https://www.strava.com/api/v3/athlete/activities/"
 
-params = dict(access_token=at,page=3)
-r = requests.get(url, params)
+def retrieveActivities(accessToken,page,per_page=29):
+    "Gets the activities for the current athlete"
+    url = "https://www.strava.com/api/v3/athlete/activities/"
+    # Page contains 30 records per page (0 based), page 11 is the last complete page, p 12 has data up to 28 records
+    params = dict(access_token=accessToken,page=1,per_page=per_page)
 
-data = r.json()
+    r = requests.get(url, params)
+    data = r.json()
 
-print(data)
-print(data[0]['id'])
-print(data[0]['name'])
-print(data[0]['average_watts'])
+    return data
 
-print(data[1]['id'])
-print(data[1]['name'])
-print(data[1]['average_watts'])
+# Main part of the program
 
-# Apparently, need to create a loop through the data from page 0 through page 11 (approx.) and get all elements on a page
-# need to find how to count elements
-# also need to find out how to refresh token etc.
+a = retrieveAthlete(at)
+d = retrieveActivities(at,1,5)
 
+"""
+print("The athlete is " + a['lastname'])
+
+print(d[1]['id']) # example for getting the id for record 1
+print(d[1]['name']) # example for getting the name for record 1
+print(d[1]['athlete']['resource_state']) # example for getting a nested value from record 1
+
+need to find how to count elements
+also need to find out how to refresh token etc.
+"""
