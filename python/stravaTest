@@ -1,0 +1,31 @@
+import requests
+import configparser
+
+# at = input("Enter the access token") Interactive input
+
+config = configparser.RawConfigParser()
+config.read(~/strava.properties)
+
+at = config.get('oAuth2','oAuth2.accessToken');
+
+
+url = "https://www.strava.com/api/v3/athlete/activities/"
+
+params = dict(access_token=at,page=3)
+r = requests.get(url, params)
+
+data = r.json()
+
+print(data)
+print(data[0]['id'])
+print(data[0]['name'])
+print(data[0]['average_watts'])
+
+print(data[1]['id'])
+print(data[1]['name'])
+print(data[1]['average_watts'])
+
+# Apparently, need to create a loop through the data from page 0 through page 11 (approx.) and get all elements on a page
+# need to find how to count elements
+# also need to find out how to refresh token etc.
+
