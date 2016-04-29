@@ -31,6 +31,14 @@ def retrieveActivities(accessToken,page,per_page=29):
 
     return data
 
+def getGear():
+    "placeholder for a getGear function"
+    return
+
+def getClubs():
+    "placeholder for a getClubs function"
+    return
+
 # Main part of the program
 
 a = retrieveAthlete(at)
