@@ -3,10 +3,11 @@ import configparser
 
 # at = input("Enter the access token") Interactive input
 
-config = configparser.RawConfigParser()
-config.read(~/strava.properties)
+config = configparser.ConfigParser()
+config.read('/Users/gb/strava.properties')
 
-at = config.get('oAuth2','oAuth2.accessToken');
+
+at = (config.get('auth', 'auth.accessToken'))
 
 
 url = "https://www.strava.com/api/v3/athlete/activities/"
