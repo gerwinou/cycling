@@ -1,5 +1,10 @@
 import requests
 import configparser
+from datetime import datetime
+import pandas as pd
+import os
+
+current_date = datetime.now().strftime('%Y-%m-%d')
 
 # Read in the config file. The configfile currently contains the access token
 config = configparser.ConfigParser()
@@ -8,67 +13,121 @@ config.read('/Users/gb/strava.properties')
 # Get the access token from the config file
 at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
-def retrieveAthlete( accessToken):
+
+def retrieveAthlete(accessToken):
     "Retrieves the data of the currently logged in user"
     getAthlete = "https://www.strava.com/api/v3/athlete/"
     params1 = dict(access_token=accessToken)
 
-    a = requests.get(getAthlete,params1)
-    print(a.headers['X-RateLimit-Usage'])
-    athlete = a.json()
+    a = requests.get(getAthlete, params1)
+    #print(a.headers['X-RateLimit-Usage'])
+    #print(a)
+    athlete = a.json() # This is the json part of the request, returning only a is not enough
+    # this should now be parsed into a data frame for further analysis
+    # question is if returning the json object is usefull
 
-    return athlete
 
-def retrieveActivities(accessToken,page,per_page=30):
+    #dfathlete = dataframe()
+    d =  {'lastname':[athlete['lastname']],'email':[athlete['email']]}
+    c = ['lastname','email']
+    dfathlete = pd.DataFrame(d, columns=c)
+    #print(dfathlete)
+
+    #return athlete
+    return dfathlete
+
+
+def retrieveActivities(accessToken, page, per_page=30):
     "Gets the activities for the current athlete"
     url = "https://www.strava.com/api/v3/athlete/activities/"
     # Page contains 30 records per page (0 based), page 11 is the last complete page, p 12 has data up to 28 records
-    params = dict(access_token=accessToken,page=page,per_page=per_page)
+    params = dict(access_token=accessToken, page=page, per_page=per_page)
 
     r = requests.get(url, params)
     print(r.headers['X-RateLimit-Usage'])
-    data = r.json()
+    a = r.json()
 
-    return data
+    #c = ['type','max_speed','average_watts','id']
+    c = ['type','max_speed','id']
+
+    dfactivities = pd.DataFrame(columns=c)
+
+    for i in range (per_page):
+        #d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts']}
+        d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed']}
+
+
+        dfactivities = dfactivities.append(d,ignore_index=True)
+        i+=1
+
+
+    return dfactivities
+
 
 def getGear():
     "placeholder for a getGear function"
     return
 
+
 def getClubs():
     "placeholder for a getClubs function"
     return
+
 
 def getCurrentRateLimit(at):
     res = retrieveAthlete(at)
     print(res['X-RateLimit-Usage'])
     return
 
-def getNumberOfPages():
 
+def getNumberOfPages():
     i = 1
-    d = retrieveActivities(at,i)
+    d = retrieveActivities(at, i)
     while (d != []):
-            d = retrieveActivities(at,i)
-            i = i + 1
-            if (d == []):
-                print('Reached the end of the data')
-    print (i)
+        d = retrieveActivities(at, i)
+        i = i + 1
+        if (d == []):
+            print('Reached the end of the data')
+    print(i)
+    return
+
+
+def writeDfToCsv(res):
+    csv_filename = '../../data/cycling/strava_activities.csv'
+
+    if csv_filename:    # this check is actually not correct, it does not work it the file does not exist
+        timestamp = str(datetime.today())
+        print("Writing data to file, previous file will be saved with the following timestamp: " + current_date)
+        os.rename(csv_filename, csv_filename + "." + current_date)
+
+    csv_file = open(csv_filename, 'w')
+
+
+
+    res.to_csv(csv_file, encoding='utf8',index=True,index_label='Index')
+    csv_file.close()
+
     return
 
 
 # Main part of the program
 
-#retrieveAthlete(at)
-#getNumberOfPages()
+#res = retrieveAthlete(at)
+#print(res)
+# getNumberOfPages()
 
-res = retrieveActivities(at,12)
+res = retrieveActivities(at, 1, 50)
 print(res)
+
+writeDfToCsv(res)
+
+
 """
 print(d[0]['id']) # example for getting the id for record 1
 print(d[0]['name']) # example for getting the name for record 1
 print(d[0]['athlete']['resource_state']) # example for getting a nested value from record 1
-"""
-# need to find how to count elements: the above way is expensive in terms of API requests
-# also need to find out how to refresh token etc.
 
+  need to find how to count elements: the above way is expensive in terms of API requests
+  also need to find out how to refresh token etc.
+  also need to find out how to filter for correct activitiy type: run does not have average_watts,and does not interest me
+"""
