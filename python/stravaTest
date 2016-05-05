@@ -47,19 +47,18 @@ def retrieveActivities(accessToken, page, per_page=30):
     print(r.headers['X-RateLimit-Usage'])
     a = r.json()
 
-    #c = ['type','max_speed','average_watts','id']
-    c = ['type','max_speed','id']
+    c = ['type','max_speed','average_watts','id']
+    #c = ['type','max_speed','id']
 
     dfactivities = pd.DataFrame(columns=c)
 
     for i in range (per_page):
-        #d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts']}
-        d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed']}
 
-
-        dfactivities = dfactivities.append(d,ignore_index=True)
+        if (a[i]['type'] == 'Ride'):
+            d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts']}
+            #d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed']}
+            dfactivities = dfactivities.append(d,ignore_index=True)
         i+=1
-
 
     return dfactivities
 
@@ -116,8 +115,8 @@ def writeDfToCsv(res):
 #print(res)
 # getNumberOfPages()
 
-res = retrieveActivities(at, 1, 50)
-print(res)
+res = retrieveActivities(at, 1, 200)
+#print(res)
 
 writeDfToCsv(res)
 
@@ -129,5 +128,5 @@ print(d[0]['athlete']['resource_state']) # example for getting a nested value fr
 
   need to find how to count elements: the above way is expensive in terms of API requests
   also need to find out how to refresh token etc.
-  also need to find out how to filter for correct activitiy type: run does not have average_watts,and does not interest me
+
 """
