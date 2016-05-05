@@ -31,30 +31,6 @@ def retrieveAthlete(accessToken):
 
     return dfathlete
 
-
-def retrieveActivities(accessToken, page, per_page=30):
-    "Gets the activities for the current athlete. This is deprecated and replaced by the retrieveAllActivities function"
-
-    url = "https://www.strava.com/api/v3/athlete/activities/"
-    params = dict(access_token=accessToken, page=page, per_page=per_page)
-
-    r = requests.get(url, params)
-    print(r.headers['X-RateLimit-Usage'])
-    a = r.json()
-    c = ['type','max_speed','average_watts','id', 'private']
-
-    dfactivities = pd.DataFrame(columns=c)
-
-    for i in range (len(a)):
-
-        if (a[i]['type'] == 'Ride'):
-            d =  {'id':str(a[i]['id']),'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts'],'private':a[i]['private']}
-            #d =  {'id':str(a[i]['id']),'type':a[i]['type'],'max_speed':a[i]['max_speed']}
-            dfactivities = dfactivities.append(d,ignore_index=True)
-        i+=1
-
-    return dfactivities
-
 def retrieveAllActivities(accessToken):
     "Gets all activities for the current athlete and writes them (optionally to a CSV file)"
 
