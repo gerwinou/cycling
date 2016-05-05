@@ -13,7 +13,6 @@ config.read('/Users/gb/strava.properties')
 # Get the access token from the config file
 at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
-
 def retrieveAthlete(accessToken):
     "Retrieves the data of the currently logged in user"
     getAthlete = "https://www.strava.com/api/v3/athlete/"
@@ -23,8 +22,6 @@ def retrieveAthlete(accessToken):
 
     athlete = a.json() # This is the json part of the request, returning only a is not enough
 
-    #print(d[0]['athlete']['resource_state']) # example for getting a nested value from record 1
-
     d =  {'lastname':[athlete['lastname']],'email':[athlete['email']]}
     c = ['lastname','email']
     dfathlete = pd.DataFrame(d, columns=c)
@@ -32,7 +29,9 @@ def retrieveAthlete(accessToken):
     return dfathlete
 
 def retrieveAllActivities(accessToken):
-    "Gets all activities for the current athlete and writes them (optionally to a CSV file)"
+    "Gets all activities for the current athlete and writes them (optionally to a CSV file)."
+
+    # TODO: handle the number of pages better, currently hardcoded as a range of 1,3
 
     url = "https://www.strava.com/api/v3/athlete/activities/"
     c = ['type','max_speed','average_watts','id','private']
@@ -53,7 +52,6 @@ def retrieveAllActivities(accessToken):
             i+=1
     writeDfToCsv(dfactivities)
     return dfactivities
-
 
 def getGear():
     "placeholder for a getGear function"
@@ -78,7 +76,6 @@ def getActivity(accessToken,activity):
     r = requests.get(url, params)
     print(r.headers['X-RateLimit-Usage'])
     a = r.json()
-    print(a)
 
     return
 
@@ -92,8 +89,6 @@ def writeDfToCsv(res):
 
     csv_file = open(csv_filename, 'w')
 
-
-
     res.to_csv(csv_file, encoding='utf8',index=True,index_label='Index')
     csv_file.close()
 
@@ -101,13 +96,4 @@ def writeDfToCsv(res):
 
 # Main part of the program
 
-
-# getActivity(at,236725978)
-
-#res = retrieveActivities(at, 2, 200)
-
 res = retrieveAllActivities(at)
-
-# print(res)
-
-
