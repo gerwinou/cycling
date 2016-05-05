@@ -26,14 +26,12 @@ def retrieveAthlete(accessToken):
     # this should now be parsed into a data frame for further analysis
     # question is if returning the json object is usefull
 
+    #print(d[0]['athlete']['resource_state']) # example for getting a nested value from record 1
 
-    #dfathlete = dataframe()
     d =  {'lastname':[athlete['lastname']],'email':[athlete['email']]}
     c = ['lastname','email']
     dfathlete = pd.DataFrame(d, columns=c)
-    #print(dfathlete)
 
-    #return athlete
     return dfathlete
 
 
@@ -46,7 +44,7 @@ def retrieveActivities(accessToken, page, per_page=30):
     r = requests.get(url, params)
     print(r.headers['X-RateLimit-Usage'])
     a = r.json()
-    print(a)
+    #print(a)
     c = ['type','max_speed','average_watts','id']
     #c = ['type','max_speed','id']
 
@@ -94,6 +92,20 @@ def getNumberOfPages():
     print(i)
     return
 
+def getActivity(accessToken,activity):
+    "Gets the activities for the current athlete"
+    #activity = activity.to
+    url = "https://www.strava.com/api/v3/activities/" + str(activity)
+    params = dict(access_token=accessToken)
+
+    r = requests.get(url, params)
+    print(r.headers['X-RateLimit-Usage'])
+    a = r.json()
+    print(a)
+
+    return
+
+
 
 def writeDfToCsv(res):
     csv_filename = '../../data/cycling/strava_activities.csv'
@@ -115,22 +127,18 @@ def writeDfToCsv(res):
 
 # Main part of the program
 
-#res = retrieveAthlete(at)
-#print(res)
+# getActivity(at,72690090)
+# res = retrieveAthlete(at)
+# print(res)
 # getNumberOfPages()
 
-res = retrieveActivities(at, 36,10)
-#print(res)
+res = retrieveActivities(at, 2,200)
+# print(res)
 
-writeDfToCsv(res)
+# writeDfToCsv(res)
 
 
 """
-print(d[0]['id']) # example for getting the id for record 1
-print(d[0]['name']) # example for getting the name for record 1
-print(d[0]['athlete']['resource_state']) # example for getting a nested value from record 1
 
-  need to find how to count elements: the above way is expensive in terms of API requests
-  also need to find out how to refresh token etc.
 
 """
