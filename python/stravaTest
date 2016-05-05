@@ -46,18 +46,22 @@ def retrieveActivities(accessToken, page, per_page=30):
     r = requests.get(url, params)
     print(r.headers['X-RateLimit-Usage'])
     a = r.json()
-
+    print(a)
     c = ['type','max_speed','average_watts','id']
     #c = ['type','max_speed','id']
 
     dfactivities = pd.DataFrame(columns=c)
 
-    for i in range (per_page):
+    print (len(a))
+
+    for i in range (len(a)):
 
         if (a[i]['type'] == 'Ride'):
-            d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts']}
-            #d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed']}
+            #d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts']}
+            d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed']}
             dfactivities = dfactivities.append(d,ignore_index=True)
+            #x = a[i]['segment_efforts']
+            #print(x)
         i+=1
 
     return dfactivities
@@ -115,7 +119,7 @@ def writeDfToCsv(res):
 #print(res)
 # getNumberOfPages()
 
-res = retrieveActivities(at, 1, 200)
+res = retrieveActivities(at, 36,10)
 #print(res)
 
 writeDfToCsv(res)
