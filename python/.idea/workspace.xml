@@ -38,8 +38,8 @@
       <file leaf-file-name="stravaTest" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stravaTest">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5212766">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.26595744">
+              <caret line="35" column="119" selection-start-line="35" selection-start-column="119" selection-end-line="35" selection-end-column="119" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -83,8 +83,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="114" />
-    <option name="y" value="45" />
+    <option name="x" value="155" />
+    <option name="y" value="50" />
     <option name="width" value="1533" />
     <option name="height" value="1008" />
   </component>
@@ -348,7 +348,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="114" y="45" width="1533" height="1008" extended-state="0" />
+    <frame x="155" y="50" width="1533" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12981082" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -671,8 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stravaTest">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5212766">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.26595744">
+          <caret line="35" column="119" selection-start-line="35" selection-start-column="119" selection-end-line="35" selection-end-column="119" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

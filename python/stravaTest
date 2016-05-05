@@ -2,7 +2,7 @@ import requests
 import configparser
 from datetime import datetime
 import pandas as pd
-import os
+import os.path
 
 current_date = datetime.now().strftime('%Y-%m-%d')
 
@@ -20,11 +20,8 @@ def retrieveAthlete(accessToken):
     params1 = dict(access_token=accessToken)
 
     a = requests.get(getAthlete, params1)
-    #print(a.headers['X-RateLimit-Usage'])
-    #print(a)
+
     athlete = a.json() # This is the json part of the request, returning only a is not enough
-    # this should now be parsed into a data frame for further analysis
-    # question is if returning the json object is usefull
 
     #print(d[0]['athlete']['resource_state']) # example for getting a nested value from record 1
 
@@ -36,32 +33,49 @@ def retrieveAthlete(accessToken):
 
 
 def retrieveActivities(accessToken, page, per_page=30):
-    "Gets the activities for the current athlete"
+    "Gets the activities for the current athlete. This is deprecated and replaced by the retrieveAllActivities function"
+
     url = "https://www.strava.com/api/v3/athlete/activities/"
-    # Page contains 30 records per page (0 based), page 11 is the last complete page, p 12 has data up to 28 records
     params = dict(access_token=accessToken, page=page, per_page=per_page)
 
     r = requests.get(url, params)
     print(r.headers['X-RateLimit-Usage'])
     a = r.json()
-    #print(a)
-    c = ['type','max_speed','average_watts','id']
-    #c = ['type','max_speed','id']
+    c = ['type','max_speed','average_watts','id', 'private']
 
     dfactivities = pd.DataFrame(columns=c)
-
-    print (len(a))
 
     for i in range (len(a)):
 
         if (a[i]['type'] == 'Ride'):
-            #d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts']}
-            d =  {'id':a[i]['id'],'type':a[i]['type'],'max_speed':a[i]['max_speed']}
+            d =  {'id':str(a[i]['id']),'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts'],'private':a[i]['private']}
+            #d =  {'id':str(a[i]['id']),'type':a[i]['type'],'max_speed':a[i]['max_speed']}
             dfactivities = dfactivities.append(d,ignore_index=True)
-            #x = a[i]['segment_efforts']
-            #print(x)
         i+=1
 
+    return dfactivities
+
+def retrieveAllActivities(accessToken):
+    "Gets all activities for the current athlete and writes them (optionally to a CSV file)"
+
+    url = "https://www.strava.com/api/v3/athlete/activities/"
+    c = ['type','max_speed','average_watts','id','private']
+    dfactivities = pd.DataFrame(columns=c)
+
+    for j in range(1, 3):
+        params = dict(access_token=accessToken, page=j, per_page=200)
+
+        r = requests.get(url, params)
+        print(r.headers['X-RateLimit-Usage'])
+        a = r.json()
+        print(len(a))
+        for i in range (len(a)):
+
+            if (a[i]['type'] == 'Ride'):
+                d =  {'id':str(a[i]['id']),'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts'],'private':a[i]['private']}
+                dfactivities = dfactivities.append(d,ignore_index=True)
+            i+=1
+    writeDfToCsv(dfactivities)
     return dfactivities
 
 
@@ -80,21 +94,8 @@ def getCurrentRateLimit(at):
     print(res['X-RateLimit-Usage'])
     return
 
-
-def getNumberOfPages():
-    i = 1
-    d = retrieveActivities(at, i)
-    while (d != []):
-        d = retrieveActivities(at, i)
-        i = i + 1
-        if (d == []):
-            print('Reached the end of the data')
-    print(i)
-    return
-
 def getActivity(accessToken,activity):
     "Gets the activities for the current athlete"
-    #activity = activity.to
     url = "https://www.strava.com/api/v3/activities/" + str(activity)
     params = dict(access_token=accessToken)
 
@@ -105,12 +106,10 @@ def getActivity(accessToken,activity):
 
     return
 
-
-
 def writeDfToCsv(res):
     csv_filename = '../../data/cycling/strava_activities.csv'
 
-    if csv_filename:    # this check is actually not correct, it does not work it the file does not exist
+    if os.path.isfile(csv_filename):
         timestamp = str(datetime.today())
         print("Writing data to file, previous file will be saved with the following timestamp: " + current_date)
         os.rename(csv_filename, csv_filename + "." + current_date)
@@ -124,21 +123,15 @@ def writeDfToCsv(res):
 
     return
 
-
 # Main part of the program
 
-# getActivity(at,72690090)
-# res = retrieveAthlete(at)
+
+# getActivity(at,236725978)
+
+#res = retrieveActivities(at, 2, 200)
+
+res = retrieveAllActivities(at)
+
 # print(res)
-# getNumberOfPages()
-
-res = retrieveActivities(at, 2,200)
-# print(res)
-
-# writeDfToCsv(res)
 
 
-"""
-
-
-"""
