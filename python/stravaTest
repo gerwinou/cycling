@@ -31,25 +31,30 @@ def retrieveAthlete(accessToken):
 def retrieveAllActivities(accessToken):
     "Gets all activities for the current athlete and writes them (optionally to a CSV file)."
 
-    # TODO: handle the number of pages better, currently hardcoded as a range of 1,3
-
     url = "https://www.strava.com/api/v3/athlete/activities/"
     c = ['type','max_speed','average_watts','id','private']
     dfactivities = pd.DataFrame(columns=c)
 
-    for j in range(1, 3):
+    x = True
+    j = 1
+
+    while x == True:
+        print(j)
         params = dict(access_token=accessToken, page=j, per_page=200)
 
         r = requests.get(url, params)
         print(r.headers['X-RateLimit-Usage'])
         a = r.json()
-        print(len(a))
+        if (len(a) == 0):
+            x = False
+
         for i in range (len(a)):
 
             if (a[i]['type'] == 'Ride'):
                 d =  {'id':str(a[i]['id']),'type':a[i]['type'],'max_speed':a[i]['max_speed'],'average_watts':a[i]['average_watts'],'private':a[i]['private']}
                 dfactivities = dfactivities.append(d,ignore_index=True)
-            i+=1
+            #i+=1
+        j += 1
     writeDfToCsv(dfactivities)
     return dfactivities
 
