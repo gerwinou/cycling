@@ -11,7 +11,7 @@ config = configparser.ConfigParser()
 config.read('/Users/gb/strava.properties')
 
 # Get the access token from the config file
-# at = (config.get('oAuth2', 'oAuth2.accessToken'))
+at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
 t = (config.get('test','test.testproperty'))
 
@@ -173,9 +173,3 @@ def writeDfToCsv(res):
     csv_file.close()
 
     return
-
-# Main part of the program
-
-res = retrieveAllActivities(at)
-#res = getActivity(at,184489700)
-#print(res)
