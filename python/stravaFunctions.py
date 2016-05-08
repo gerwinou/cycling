@@ -8,8 +8,6 @@ import os.path
 config = configparser.ConfigParser()
 config.read('/Users/gb/strava.properties')
 
-#at = (config.get('oAuth2', 'oAuth2.accessToken'))
-
 filepath = config.get('locations','csvfile.path')
 filename = config.get('locations','csvfile.name')
 
@@ -32,41 +30,14 @@ def retrieveAllActivities(accessToken):
     "Gets all activities for the current athlete and writes them (optionally to a CSV file)."
 
     url = "https://www.strava.com/api/v3/athlete/activities/"
-    c = [
-        'type',
-        'max_speed',
-        'average_watts',
-        'id',
-        'private',
-        'start_longitude',
-        'moving_time',
-        'elev_low',
-        'total_elevation_gain',
-        'average_heartrate',
-        'location_state',
-        'gear_id',
-        'athlete_count',
-        'location_country',
-        'timezone',
-        'elev_high',
-        'end_latlng',
-        'average_cadence',
-        'start_date',
-        'location_city',
-        'max_heartrate',
-        'start_latitude',
-        'distance',
-        'name',
-        'kilojoules',
-        'resource_state',
-        'start_date_local',
-        'athlete_id',
-	    'elapsed_time',
-        'start_latlng',
-        'average_speed',
 
-         ]
+
+
+    with open('activity.def') as f:
+        c = f.read().splitlines()
+
     dfactivities = pd.DataFrame(columns=c)
+
 
     x = True
     j = 1
@@ -85,41 +56,28 @@ def retrieveAllActivities(accessToken):
         for i in range (len(a)):
 
             if (a[i]['type'] == 'Ride'):
-                d =  {
-                    'id':str(a[i]['id']),
-                    'type':a[i]['type'],
-                    'max_speed':a[i]['max_speed'],
-                    'average_watts':a[i]['average_watts'],
-                    'private':a[i]['private'],
-                    'start_longitude':a[i]['start_longitude'],
-                    'moving_time':a[i]['moving_time'],
-                    'elev_low':a[i]['elev_low'],
-                    'total_elevation_gain':a[i]['total_elevation_gain'],
+
+
+                d =  { b:a[i][b] for b in c }
+
+                """
+                    The line above reads the data from the .def file
+                    The following issues still exist with this:
+                    - check for presence of data (heartrate and cadence) must be handled
+                    - some data must be transformed to string format (id)
+                    - athlete_id is in another format (nesting)
+                    'id':str(a[i]['id']), # kept as reference for the syntax
                     'average_heartrate':"NA" if 'average_heartrate' not in a[i] else a[i]['average_heartrate'],
-                    'location_state':a[i]['location_state'],
-                    'gear_id':a[i]['gear_id'],
-                    'athlete_count':a[i]['athlete_count'],
-                    'location_country':a[i]['location_country'],
-                    'timezone':a[i]['timezone'],
-                    'elev_high':a[i]['elev_high'],
-                    'end_latlng':a[i]['end_latlng'],
                     'average_cadence':"NA" if 'average_cadence' not in a[i] else a[i]['average_cadence'],
-                    'start_date':a[i]['start_date'],
-                    'location_city':a[i]['location_city'],
-                    'max_heartrate':"NA" if 'max_heartrate' not in a[i] else ['max_heartrate'],
-                    'start_latitude':a[i]['start_latitude'],
-                    'distance':a[i]['distance'],
-                    'name':a[i]['name'],
-                    'kilojoules':a[i]['kilojoules'],
-                    'resource_state':a[i]['resource_state'],
-                    'start_date_local':a[i]['start_date_local'],
-                    'athlete_id':str(a[i]['athlete']['id']) ,
-                    'elapsed_time':a[i]['elapsed_time'],
-                    'start_latlng':a[i]['start_latlng'],
-                    'average_speed':a[i]['average_speed']
-                      }
+                    'max_heartrate':"NA" if 'max_heartrate' not in a[i] else a[i]['max_heartrate'],
+                    'athlete_id':str(a[i]['athlete']['id']) # temporarily solved by adding it manually
+                """
+                f = {'athlete_id':str(a[i]['athlete']['id'])}
+
+                d.update(f)
+                      #}
                 dfactivities = dfactivities.append(d,ignore_index=True)
-            #i+=1
+
         j += 1
     writeDfToCsv(dfactivities)
     return dfactivities
