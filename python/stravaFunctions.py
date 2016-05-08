@@ -4,14 +4,14 @@ from datetime import datetime
 import pandas as pd
 import os.path
 
-current_date = datetime.now().strftime('%Y-%m-%d')
+
 
 # Read in the config file. The configfile currently contains the access token
 config = configparser.ConfigParser()
 config.read('/Users/gb/strava.properties')
 
 # Get the access token from the config file
-at = (config.get('oAuth2', 'oAuth2.accessToken'))
+# at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
 def retrieveAthlete(accessToken):
     "Retrieves the data of the currently logged in user"
@@ -151,6 +151,9 @@ def getActivity(accessToken,activity):
     return a
 
 def writeDfToCsv(res):
+
+    current_date = datetime.now().strftime('%Y-%m-%d')
+
     csv_filename = '../../data/cycling/strava_activities.csv'
 
     if os.path.isfile(csv_filename):
