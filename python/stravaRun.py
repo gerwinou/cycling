@@ -7,5 +7,5 @@ config.read('/Users/gb/strava.properties')
 
 at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
-sf.testProperty()
+
 res = sf.retrieveAllActivities(at)
