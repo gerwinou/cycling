@@ -13,6 +13,12 @@ config.read('/Users/gb/strava.properties')
 # Get the access token from the config file
 # at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
+t = (config.get('test','test.testproperty'))
+
+def testProperty():
+    print(t)
+
+
 def retrieveAthlete(accessToken):
     "Retrieves the data of the currently logged in user"
     getAthlete = "https://www.strava.com/api/v3/athlete/"
