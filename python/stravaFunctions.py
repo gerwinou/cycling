@@ -57,20 +57,18 @@ def retrieveAllActivities(accessToken):
 
             if (a[i]['type'] == 'Ride'):
 
-
-                #d =  { b:a[i][b] for b in c }
                 d =  { b:"NA" if b not in a[i] else a[i][b] for b in c }
 
                 """
-                'average_heartrate':"NA" if 'average_heartrate' not in a[i] else a[i]['average_heartrate'],
-                csv_record += empty_record if 'activityId' not in a['activity'] else a['activity']['activityId'] + ';'
+
                     The line above reads the data from the .def file
                     The following issues still exist with this:
                    - some data must be transformed to string format (id)
                     - athlete_id is in another format (nesting)
                     'id':str(a[i]['id']), # kept as reference for the syntax
-                    'athlete_id':str(a[i]['athlete']['id']) # temporarily solved by adding it manually
+                    'athlete_id':str(a[i]['athlete']['id']) # temporarily solved by adding it manually (see the line below)
                 """
+
                 f = {'athlete_id':str(a[i]['athlete']['id'])}
 
                 d.update(f)
