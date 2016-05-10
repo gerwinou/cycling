@@ -9,3 +9,4 @@ at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
 
 res = sf.retrieveAllActivities(at)
+#print(res.dtypes)

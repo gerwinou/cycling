@@ -36,8 +36,10 @@ def retrieveAllActivities(accessToken):
     with open('activity.def') as f:
         c = f.read().splitlines()
 
-    dfactivities = pd.DataFrame(columns=c)
+    dfactivities = pd.DataFrame(columns=c,dtype=None)
 
+    #raw_cat = pd.Categorical(["id"])
+    #dfactivities(raw_cat)
 
     x = True
     j = 1
@@ -60,23 +62,30 @@ def retrieveAllActivities(accessToken):
                 d =  { b:"NA" if b not in a[i] else a[i][b] for b in c }
 
                 """
-
+                    also need to consider concat instead of append
                     The line above reads the data from the .def file
                     The following issues still exist with this:
-                   - some data must be transformed to string format (id)
-                    - athlete_id is in another format (nesting)
-                    'id':str(a[i]['id']), # kept as reference for the syntax
+                   - some data must cast explicitly to string format (id). This is because Pandas dataframe wrongly converts integers
+                   to floats. Another option is to copy the dataframe to a new one when exporting to CSV, and to keep in mind that id' need
+                   to be converted before using them
+                    - athlete_id is in a deeper level (nested)
                     'athlete_id':str(a[i]['athlete']['id']) # temporarily solved by adding it manually (see the line below)
                 """
 
-                f = {'athlete_id':str(a[i]['athlete']['id'])}
-
+                f = {'athlete_id':(a[i]['athlete']['id'])}
+                #print(a[i]['athlete']['id'])
+                #print (f)
                 d.update(f)
                       #}
                 dfactivities = dfactivities.append(d,ignore_index=True)
 
         j += 1
+
+    # dfactivities["id"] = dfactivities["id"].astype('categorical') # does not work, because it is too late
     writeDfToCsv(dfactivities)
+
+
+
     return dfactivities
 
 def getGear():
@@ -119,7 +128,7 @@ def writeDfToCsv(res):
 
     csv_file = open(csv_filename, 'w')
 
-    res.to_csv(csv_file, encoding='utf8',index=True,index_label='Index')
+    res.to_csv(csv_file, encoding='utf8',index=True,index_label='Index', sep=";",na_rep="NA")
     csv_file.close()
 
     return
