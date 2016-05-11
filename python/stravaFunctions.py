@@ -3,6 +3,7 @@ import configparser
 from datetime import datetime
 import pandas as pd
 import os.path
+import numpy as np
 
 # Read in the config file. The configfile currently contains the access token
 config = configparser.ConfigParser()
@@ -31,15 +32,11 @@ def retrieveAllActivities(accessToken):
 
     url = "https://www.strava.com/api/v3/athlete/activities/"
 
-
-
     with open('activity.def') as f:
         c = f.read().splitlines()
 
-    dfactivities = pd.DataFrame(columns=c,dtype=None)
-
-    #raw_cat = pd.Categorical(["id"])
-    #dfactivities(raw_cat)
+    dfactivities = pd.DataFrame(columns=c)
+    dfactivities.id=dfactivities.id.astype(np.int64)
 
     x = True
     j = 1
@@ -65,26 +62,22 @@ def retrieveAllActivities(accessToken):
                     also need to consider concat instead of append
                     The line above reads the data from the .def file
                     The following issues still exist with this:
-                   - some data must cast explicitly to string format (id). This is because Pandas dataframe wrongly converts integers
-                   to floats. Another option is to copy the dataframe to a new one when exporting to CSV, and to keep in mind that id' need
-                   to be converted before using them
                     - athlete_id is in a deeper level (nested)
                     'athlete_id':str(a[i]['athlete']['id']) # temporarily solved by adding it manually (see the line below)
                 """
 
-                f = {'athlete_id':(a[i]['athlete']['id'])}
-                #print(a[i]['athlete']['id'])
-                #print (f)
+                f = {'athlete_id':str(a[i]['athlete']['id'])}
+
                 d.update(f)
-                      #}
+
                 dfactivities = dfactivities.append(d,ignore_index=True)
+                #dfactivities = dfactivities.concat(d)
+                #dfactivities.id=dfactivities.id.astype(np.int64)
+                #dfactivities.concat(d)
 
         j += 1
 
-    # dfactivities["id"] = dfactivities["id"].astype('categorical') # does not work, because it is too late
     writeDfToCsv(dfactivities)
-
-
 
     return dfactivities
 
@@ -92,11 +85,9 @@ def getGear():
     "placeholder for a getGear function"
     return
 
-
 def getClubs():
     "placeholder for a getClubs function"
     return
-
 
 def getCurrentRateLimit(at):
     res = retrieveAthlete(at)
@@ -118,7 +109,6 @@ def writeDfToCsv(res):
 
     current_date = datetime.now().strftime('%Y-%m-%d')
 
-    #csv_filename = '../../data/cycling/strava_activities.csv'
     csv_filename = filepath+'/'+filename
 
     if os.path.isfile(csv_filename):
