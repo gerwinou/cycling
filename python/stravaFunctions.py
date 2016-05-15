@@ -76,7 +76,7 @@ def retrieveAllActivities(accessToken):
 
         j += 1
 
-    
+
 
     return dfactivities
 
@@ -94,7 +94,7 @@ def getCurrentRateLimit(at):
     return
 
 def getActivity(accessToken,activity):
-    "Gets the activities for the current athlete"
+    "Gets the details of the specific activity for the current athlete"
     url = "https://www.strava.com/api/v3/activities/" + str(activity)
     params = dict(access_token=accessToken)
 
