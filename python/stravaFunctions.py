@@ -1,3 +1,5 @@
+#!/Library/Frameworks/Python.framework/Versions/3.5/bin/python3
+
 import requests
 import configparser
 from datetime import datetime
@@ -71,9 +73,6 @@ def retrieveAllActivities(accessToken):
                 d.update(f)
 
                 dfactivities = dfactivities.append(d,ignore_index=True)
-                #dfactivities = dfactivities.concat(d)
-                #dfactivities.id=dfactivities.id.astype(np.int64)
-                #dfactivities.concat(d)
 
         j += 1
 
