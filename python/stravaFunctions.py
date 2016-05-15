@@ -76,7 +76,7 @@ def retrieveAllActivities(accessToken):
 
         j += 1
 
-    writeDfToCsv(dfactivities)
+    
 
     return dfactivities
 
