@@ -15,4 +15,8 @@ res = sf.retrieveAllActivities(at)
 # sf.writeDfToCsv(res)
 
 actIds = res['id']
-print(actIds)
+#print(actIds)
+
+
+act = sf.getActivity(at,actIds[0])
+print(act)
