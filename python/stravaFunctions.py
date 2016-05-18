@@ -7,6 +7,9 @@ import pandas as pd
 import os.path
 import numpy as np
 
+debug = False # make it a property
+# better, make debug levels
+
 # Read in the config file. The configfile currently contains the access token
 config = configparser.ConfigParser()
 config.read('/Users/gb/strava.properties')
@@ -100,6 +103,12 @@ def getActivity(accessToken,activity):
 
     except requests.exceptions.Timeout as e:
         print(e)
+        exit(1)
+    except requests.ConnectionError as e:
+        print("Connection Error occurred")
+        if (debug):
+            print(e)
+        exit(1)
 
     a = r.json()
 
