@@ -36,8 +36,8 @@ def updateData():
 def readDataFromCsv():
     res = sf.readDfFromCsv()
     #print(res)
-    actIds = res['id']
-    print(actIds)
+    #actIds = res['id']
+    #print(actIds)
     return res
 
 def getActivity(res):
@@ -45,7 +45,9 @@ def getActivity(res):
     #act = sf.getActivity(at,'573957038') # hardcoded to test
     act = sf.getActivity(at,res['id'][0])
     print("Number of efforts found in this activity: " + str(len(act['segment_efforts'])))
-    print(act['segment_efforts'][0])
+
+    for i in range (len(act['segment_efforts'])):
+        print(str(act['segment_efforts'][i]['segment']['id'])+":"+act['segment_efforts'][i]['segment']['name'])
     return
 
 # Main
@@ -56,4 +58,4 @@ if args.update:
 
 # updateData() # updates the csv file with activities
 res = readDataFromCsv() # reads from the CSV
-# getActivity(res)
+getActivity(res)

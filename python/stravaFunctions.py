@@ -94,9 +94,13 @@ def getActivity(accessToken,activity):
     "Gets the details of the specific activity for the current athlete"
     url = "https://www.strava.com/api/v3/activities/" + str(activity)
     params = dict(access_token=accessToken)
+    try:
+        r = requests.get(url, params)
+        print(r.headers['X-RateLimit-Usage'])
 
-    r = requests.get(url, params)
-    print(r.headers['X-RateLimit-Usage'])
+    except requests.exceptions.Timeout as e:
+        print(e)
+
     a = r.json()
 
     return a
