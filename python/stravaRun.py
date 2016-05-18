@@ -18,20 +18,21 @@ def updateData():
 def readDataFromCsv():
     res = sf.readDfFromCsv()
     # print(res)
-    actIds = res['id']
-    print(actIds)
-    return
+    #actIds = res['id']
+    #print(actIds)
+    return res
 
-def getActivity():
+def getActivity(res):
     #act = sf.getActivity(at,actIds[0])
     #act = sf.getActivity(at,'573957038') # hardcoded to test
-
-    #print("Number of efforts found in this activity: " + str(len(act['segment_efforts'])))
-    #print(act['segment_efforts'][0])
+    act = sf.getActivity(at,res['id'][0])
+    print("Number of efforts found in this activity: " + str(len(act['segment_efforts'])))
+    print(act['segment_efforts'][0])
     return
 
 # Main
 # Must be parameterized by command line switches
 
-# updateData()
-readDataFromCsv()
+# updateData() # updates the csv file with activities
+res = readDataFromCsv() # reads from the CSV
+getActivity(res)
