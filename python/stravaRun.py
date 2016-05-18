@@ -3,6 +3,24 @@
 import stravaFunctions as sf
 import configparser
 
+import argparse
+
+parser = argparse.ArgumentParser(
+    description = 'Strava Data Analysis Tool',
+    epilog = 'Happy Cycling!')
+
+script_version = '0.1'
+
+parser.add_argument('-v','--version', help="print version and exit", action="store_true")
+parser.add_argument('-u','--update', help="Updates all activities in the csv file", action="store_true")
+#parser.add_argument('--password', help="your Garmin Connect password (otherwise, you will be prompted)", nargs='?')
+
+args = parser.parse_args()
+
+if args.version:
+	print ("version " + script_version)
+	exit(0)
+
 # Read in the config file. The configfile currently contains the access token
 config = configparser.ConfigParser()
 config.read('/Users/gb/strava.properties')
@@ -17,9 +35,9 @@ def updateData():
 
 def readDataFromCsv():
     res = sf.readDfFromCsv()
-    # print(res)
-    #actIds = res['id']
-    #print(actIds)
+    #print(res)
+    actIds = res['id']
+    print(actIds)
     return res
 
 def getActivity(res):
@@ -32,7 +50,10 @@ def getActivity(res):
 
 # Main
 # Must be parameterized by command line switches
+if args.update:
+    updateData()
+    exit(0)
 
 # updateData() # updates the csv file with activities
 res = readDataFromCsv() # reads from the CSV
-getActivity(res)
+# getActivity(res)
