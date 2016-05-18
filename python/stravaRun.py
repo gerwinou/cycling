@@ -9,14 +9,29 @@ config.read('/Users/gb/strava.properties')
 
 at = (config.get('oAuth2', 'oAuth2.accessToken'))
 
-res = sf.retrieveAllActivities(at)
-#print(res.dtypes)
+def updateData():
+    res = sf.retrieveAllActivities(at)
+    #print(res.dtypes)
+    sf.writeDfToCsv(res)
+    return
 
-# sf.writeDfToCsv(res)
+def readDataFromCsv():
+    res = sf.readDfFromCsv()
+    # print(res)
+    actIds = res['id']
+    print(actIds)
+    return
 
-actIds = res['id']
-#print(actIds)
+def getActivity():
+    #act = sf.getActivity(at,actIds[0])
+    #act = sf.getActivity(at,'573957038') # hardcoded to test
 
+    #print("Number of efforts found in this activity: " + str(len(act['segment_efforts'])))
+    #print(act['segment_efforts'][0])
+    return
 
-act = sf.getActivity(at,actIds[0])
-print(act)
+# Main
+# Must be parameterized by command line switches
+
+# updateData()
+readDataFromCsv()

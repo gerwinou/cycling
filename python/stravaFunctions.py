@@ -13,6 +13,7 @@ config.read('/Users/gb/strava.properties')
 
 filepath = config.get('locations','csvfile.path')
 filename = config.get('locations','csvfile.name')
+csv_filename = filepath+'/'+filename
 
 def retrieveAthlete(accessToken):
     "Retrieves the data of the currently logged in user"
@@ -61,7 +62,6 @@ def retrieveAllActivities(accessToken):
                 d =  { b:"NA" if b not in a[i] else a[i][b] for b in c }
 
                 """
-                    also need to consider concat instead of append
                     The line above reads the data from the .def file
                     The following issues still exist with this:
                     - athlete_id is in a deeper level (nested)
@@ -71,12 +71,9 @@ def retrieveAllActivities(accessToken):
                 f = {'athlete_id':str(a[i]['athlete']['id'])}
 
                 d.update(f)
-
                 dfactivities = dfactivities.append(d,ignore_index=True)
 
         j += 1
-
-
 
     return dfactivities
 
@@ -108,7 +105,7 @@ def writeDfToCsv(res):
 
     current_date = datetime.now().strftime('%Y-%m-%d')
 
-    csv_filename = filepath+'/'+filename
+    # csv_filename = filepath+'/'+filename
 
     if os.path.isfile(csv_filename):
         timestamp = str(datetime.today())
@@ -121,3 +118,10 @@ def writeDfToCsv(res):
     csv_file.close()
 
     return
+
+def readDfFromCsv():
+    if os.path.isfile(csv_filename):
+        print(csv_filename)
+        df = pd.read_csv(csv_filename,sep=";")
+
+    return df
