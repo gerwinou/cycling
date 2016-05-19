@@ -11,8 +11,6 @@ import logging.config
 
 logging.config.fileConfig('logging.conf')
 logger = logging.getLogger('stravamod')
-#debug = False # make it a property
-# better, make debug levels
 
 # Read in the config file. The configfile currently contains the access token
 config = configparser.ConfigParser()
@@ -56,7 +54,9 @@ def retrieveAllActivities(accessToken):
         params = dict(access_token=accessToken, page=j, per_page=200)
 
         r = requests.get(url, params)
-        print(r.headers['X-RateLimit-Usage'])
+        logger.info(r.headers['X-RateLimit-Usage'])
+        #logger.info(r.headers['content-type'])
+
         a = r.json()
 
         if (len(a) == 0):
@@ -64,7 +64,7 @@ def retrieveAllActivities(accessToken):
 
         for i in range (len(a)):
 
-            if (a[i]['type'] == 'Ride'):
+            if (a[i]["type"] == "Ride"):
 
                 d =  { b:"NA" if b not in a[i] else a[i][b] for b in c }
 
@@ -94,7 +94,7 @@ def getClubs():
 
 def getCurrentRateLimit(at):
     res = retrieveAthlete(at)
-    print(res['X-RateLimit-Usage'])
+    logger.info(res['X-RateLimit-Usage'])
     return
 
 def getActivity(accessToken,activity):
@@ -113,7 +113,8 @@ def getActivity(accessToken,activity):
         logger.critical("Connection Error occurred while connecting to: %s",url)
 
         exit(1)
-
+        
+    print(r.text)
     a = r.json()
 
     return a
@@ -126,7 +127,7 @@ def writeDfToCsv(res):
 
     if os.path.isfile(csv_filename):
         timestamp = str(datetime.today())
-        print("Writing data to file, previous file will be saved with the following timestamp: " + current_date)
+        logger.info("Writing data to file, previous file will be saved with the following timestamp: " + current_date)
         os.rename(csv_filename, csv_filename + "." + current_date)
 
     csv_file = open(csv_filename, 'w')
