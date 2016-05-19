@@ -2,8 +2,12 @@
 
 import stravaFunctions as sf
 import configparser
-
 import argparse
+import logging
+import logging.config
+
+logging.config.fileConfig('logging.conf')
+logger = logging.getLogger('strava')
 
 parser = argparse.ArgumentParser(
     description = 'Strava Data Analysis Tool',
@@ -35,19 +39,16 @@ def updateData():
 
 def readDataFromCsv():
     res = sf.readDfFromCsv()
-    #print(res)
-    #actIds = res['id']
-    #print(actIds)
     return res
 
 def getActivity(res):
     #act = sf.getActivity(at,actIds[0])
     #act = sf.getActivity(at,'573957038') # hardcoded to test
     act = sf.getActivity(at,res['id'][0])
-    print("Number of efforts found in this activity: " + str(len(act['segment_efforts'])))
 
+    logger.info("Number of efforts found in this activity: %s", str(len(act['segment_efforts'])))
     for i in range (len(act['segment_efforts'])):
-        print(str(act['segment_efforts'][i]['segment']['id'])+":"+act['segment_efforts'][i]['segment']['name'])
+        logger.info(str(act['segment_efforts'][i]['segment']['id'])+":"+act['segment_efforts'][i]['segment']['name'])
     return
 
 # Main
@@ -57,5 +58,15 @@ if args.update:
     exit(0)
 
 # updateData() # updates the csv file with activities
-res = readDataFromCsv() # reads from the CSV
-getActivity(res)
+def main():
+    #logging.basicConfig(filename='myapp.log', level=logging.INFO)
+    #logging.info('Started')
+    #mylib.do_something()
+    #logging.info('Finished'
+
+    logger.info("Starting")
+    res = readDataFromCsv() # reads from the CSV
+    getActivity(res)
+
+if __name__ == '__main__':
+    main()

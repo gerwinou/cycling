@@ -6,8 +6,12 @@ from datetime import datetime
 import pandas as pd
 import os.path
 import numpy as np
+import logging
+import logging.config
 
-debug = False # make it a property
+logging.config.fileConfig('logging.conf')
+logger = logging.getLogger('stravamod')
+#debug = False # make it a property
 # better, make debug levels
 
 # Read in the config file. The configfile currently contains the access token
@@ -34,7 +38,7 @@ def retrieveAthlete(accessToken):
     return dfathlete
 
 def retrieveAllActivities(accessToken):
-    "Gets all activities for the current athlete and writes them (optionally to a CSV file)."
+    "Gets all activities for the current athlete."
 
     url = "https://www.strava.com/api/v3/athlete/activities/"
 
@@ -99,15 +103,15 @@ def getActivity(accessToken,activity):
     params = dict(access_token=accessToken)
     try:
         r = requests.get(url, params)
-        print(r.headers['X-RateLimit-Usage'])
+        logger.info("Current usage is %s",r.headers['X-RateLimit-Usage'])
 
     except requests.exceptions.Timeout as e:
-        print(e)
+        logger.critical("Connection Timeout occurred while connecting to: %s",url)
         exit(1)
     except requests.ConnectionError as e:
-        print("Connection Error occurred")
-        if (debug):
-            print(e)
+        #print("Connection Error occurred while accessing " + url)
+        logger.critical("Connection Error occurred while connecting to: %s",url)
+
         exit(1)
 
     a = r.json()
@@ -134,7 +138,7 @@ def writeDfToCsv(res):
 
 def readDfFromCsv():
     if os.path.isfile(csv_filename):
-        print(csv_filename)
+        #print(csv_filename)
         df = pd.read_csv(csv_filename,sep=";")
 
     return df

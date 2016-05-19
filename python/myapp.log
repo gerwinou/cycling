@@ -1,0 +1,5 @@
+INFO:root:Started
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.strava.com
+INFO:root:Started
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.strava.com
+INFO:root:Connection Error occurred
