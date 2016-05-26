@@ -61,7 +61,8 @@ def retrieveAllActivities(accessToken):
 
         if (len(a) == 0):
             x = False
-
+            #break
+        logger.info("still running" + str(j))
         for i in range (len(a)):
 
             if (a[i]["type"] == "Ride"):
@@ -113,7 +114,7 @@ def getActivity(accessToken,activity):
         logger.critical("Connection Error occurred while connecting to: %s",url)
 
         exit(1)
-        
+
     print(r.text)
     a = r.json()
 
