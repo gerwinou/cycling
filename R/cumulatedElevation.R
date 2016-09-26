@@ -21,3 +21,4 @@ p <- p + ggtitle("Cumulated elevation, per year")
 p <- p + scale_color_discrete(name = "Legend (Year)")
 p <- p + scale_y_continuous(breaks=seq(round(min(cumu$cumElevation)),round(max(cumu$cumElevation)),2500))  # Ticks from min to max, every 1
 p
+

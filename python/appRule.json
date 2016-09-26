@@ -1,0 +1,73 @@
+{
+  "code": "71519911-9e43-45c9-9d96-16fde981426e",
+  "methods": [
+    "GET",
+    "POST"
+  ],
+  "resourcePolicy": {
+    "rules": [
+      {
+        "condition": {
+          "operands": [
+            {
+              "attribute": "groups",
+              "operation": "Includes",
+              "subtype": "common",
+              "type": "UserAttributeOperation",
+              "values": [
+                "FvL"
+              ]
+            }
+          ],
+          "operation": "And",
+          "type": "LogicalOperation"
+        },
+        "hint": {
+          "action": "Allow"
+        },
+        "type": "LogicalRule"
+      },
+      {
+        "condition": {
+          "operands": [
+            {
+              "attribute": "uri",
+              "operation": "MatchesIgnoreCase",
+              "subtype": "Header",
+              "type": "ContextAttributeOperation",
+              "values": [
+                "/ebanking/[A-Za-z0-9]*/*DataUpdateServlet]"
+              ]
+            },
+            {
+              "attribute": "uri",
+              "operation": "MatchesIgnoreCase",
+              "subtype": "Header",
+              "type": "ContextAttributeOperation",
+              "values": [
+                "/ebanking/[A-Za-z0-9_]*/ajax/*"
+              ]
+            },
+            {
+              "attribute": "uri",
+              "operation": "MatchesIgnoreCase",
+              "subtype": "Header",
+              "type": "ContextAttributeOperation",
+              "values": [
+                "/ebanking/[A-Za-z0-9_]*/mashup*"
+              ]
+            }
+          ],
+          "operation": "Or",
+          "type": "LogicalOperation"
+        },
+        "hint": {
+          "action": "Allow"
+        },
+        "type": "LogicalRule"
+      }
+    ],
+    "type": "RuleSet"
+  },
+  "uri": "/FVLN2_customThemes"
+}
