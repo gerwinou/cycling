@@ -6,7 +6,7 @@ library(lubridate)
 garminReport <-"data/cycling/activities.csv"
 temp <- read.csv(garminReport,sep=";",dec = ",",na.strings = "",header=T)
 
-temp$BeginTimestamp<-as.Date(temp$BeginTimestamp)
+p;temp$BeginTimestamp<-as.Date(temp$BeginTimestamp)
 data<-temp[order(temp$BeginTimestamp),]
 data$Date <- as.Date(data$BeginTimestamp)
 cumu <- ddply(data,.(year(Date)),transform, cumDistance = cumsum(Distance))

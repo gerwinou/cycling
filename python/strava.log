@@ -24,3 +24,398 @@
 2016-05-24 07:54:21,542 - stravamod - INFO - still running3
 2016-05-24 07:54:21,544 - stravamod - INFO - Writing data to file, previous file will be saved with the following timestamp: 2016-05-24
 2016-06-02 07:11:46,766 - stravamod - INFO - Current usage is 1,1
+2016-10-07 11:15:36,696 - stravamod - INFO - Current usage is 1,9
+2016-10-07 11:17:53,861 - stravamod - INFO - 2,10
+2016-10-07 11:17:53,867 - stravamod - INFO - still running1
+2016-10-07 11:18:00,179 - stravamod - INFO - 3,11
+2016-10-07 11:18:00,190 - stravamod - INFO - still running2
+2016-10-07 11:18:04,829 - stravamod - INFO - 4,12
+2016-10-07 11:18:04,829 - stravamod - INFO - still running3
+2016-10-07 11:18:04,845 - stravamod - INFO - Writing data to file, previous file will be saved with the following timestamp: 2016-10-07
+2016-10-07 11:23:44,859 - stravamod - INFO - 5,13
+2016-10-07 11:23:44,864 - stravamod - INFO - still running1
+2016-10-07 11:23:50,802 - stravamod - INFO - 6,14
+2016-10-07 11:23:50,807 - stravamod - INFO - still running2
+2016-10-07 11:23:54,835 - stravamod - INFO - 7,15
+2016-10-07 11:23:54,836 - stravamod - INFO - still running3
+2016-10-07 11:24:38,633 - stravamod - INFO - 8,16
+2016-10-07 11:24:38,637 - stravamod - INFO - still running1
+2016-10-07 11:24:45,435 - stravamod - INFO - 9,17
+2016-10-07 11:24:45,440 - stravamod - INFO - still running2
+2016-10-07 11:24:49,630 - stravamod - INFO - 10,18
+2016-10-07 11:24:49,631 - stravamod - INFO - still running3
+2016-10-07 11:24:49,634 - stravamod - INFO - Writing data to file, previous file will be saved with the following timestamp: 2016-10-07
+2016-10-09 23:26:25,936 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:27:35,832 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:28:43,942 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:28:45,455 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-09 23:29:39,094 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:29:39,756 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-09 23:30:33,329 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:30:34,504 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-09 23:34:49,559 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:34:50,629 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-09 23:39:42,815 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:39:43,927 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-09 23:40:05,133 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:40:05,807 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-09 23:41:59,093 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:42:00,136 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-09 23:43:13,263 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:44:04,089 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:44:16,590 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:44:30,735 - stravamod - DEBUG - Getting data for Holdeurn effort
+2016-10-09 23:44:31,492 - stravamod - DEBUG - [{"type":"time","data":[6200,6210,6217,6225,6232,6240,6247,6256,6261,6269,6274,6277,6282,6287,6294,6299,6304,6311,6318,6325,6330,6336,6342,6349,6350,6355,6360,6366,6371,6373,6378,6384,6391,6392,6398,6399,6402,6407,6409,6415,6420,6423,6429,6438,6447,6457,6464,6469,6478,6486,6493,6499,6506,6512,6515,6519,6524,6530,6534,6539,6541,6546,6551,6553,6559,6560,6567,6572,6577,6585,6591,6597,6599],"series_type":"distance","original_size":73,"resolution":"high"},{"type":"distance","data":[52490.4,52581.3,52649.8,52732.9,52797.7,52870.7,52934.7,53015.0,53069.8,53166.3,53225.5,53259.7,53311.9,53359.0,53423.2,53470.1,53520.0,53588.8,53658.9,53719.2,53764.6,53815.0,53861.4,53921.2,53929.9,53974.3,54018.8,54072.1,54114.2,54131.4,54170.5,54217.6,54278.6,54286.5,54333.4,54341.3,54365.5,54403.5,54419.4,54465.8,54504.7,54527.3,54569.0,54633.9,54697.3,54767.0,54816.3,54852.2,54915.7,54970.1,55017.5,55057.9,55106.6,55146.2,55166.3,55191.6,55224.8,55262.6,55288.3,55318.8,55329.9,55359.0,55388.1,55402.1,55441.1,55447.8,55495.5,55530.9,55567.3,55621.7,55666.5,55711.9,55725.9],"series_type":"distance","original_size":73,"resolution":"high"}]
+2016-10-10 07:36:45,784 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 07:36:47,528 - stravamod - DEBUG - [{"id":3330852149,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":145551678,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":380,"moving_time":380,"start_date":"2013-05-28T18:09:30Z","start_date_local":"2013-05-28T20:09:30Z","distance":3256.1,"start_index":919,"end_index":992,"average_cadence":88.4,"device_watts":false,"average_watts":280.4,"average_heartrate":152.4,"max_heartrate":176.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":1,"achievements":[{"type_id":3,"type":"pr","rank":1}]},{"id":15609669406,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":638801359,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":381,"moving_time":381,"start_date":"2016-07-12T18:11:02Z","start_date_local":"2016-07-12T20:11:02Z","distance":3237.5,"start_index":916,"end_index":986,"average_cadence":88.9,"device_watts":false,"average_watts":276.7,"average_heartrate":166.6,"max_heartrate":181.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":2,"achievements":[{"type_id":3,"type":"pr","rank":2}]},{"id":1588450431,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":18052781,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":392,"moving_time":392,"start_date":"2012-05-01T18:16:25Z","start_date_local":"2012-05-01T20:16:25Z","distance":3211.81,"start_index":914,"end_index":985,"average_cadence":84.8,"device_watts":false,"average_watts":261.1,"average_heartrate":159.5,"max_heartrate":182.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":14344114347,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":589485688,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":393,"moving_time":393,"start_date":"2016-05-24T18:15:08Z","start_date_local":"2016-05-24T20:15:08Z","distance":3257.9,"start_index":967,"end_index":1037,"average_cadence":78.7,"device_watts":false,"average_watts":270.3,"average_heartrate":152.6,"max_heartrate":176.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":3,"achievements":[{"type_id":3,"type":"pr","rank":3}]},{"id":14670424038,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":601919672,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":394,"moving_time":394,"start_date":"2016-06-07T18:12:13Z","start_date_local":"2016-06-07T20:12:13Z","distance":3265.6,"start_index":819,"end_index":886,"average_cadence":79.3,"device_watts":false,"average_watts":271.3,"average_heartrate":170.1,"max_heartrate":184.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588444750,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":53122610,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":396,"moving_time":396,"start_date":"2013-05-07T18:12:42Z","start_date_local":"2013-05-07T20:12:42Z","distance":3267.2,"start_index":984,"end_index":1057,"average_cadence":89.9,"device_watts":false,"average_watts":264.5,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588446035,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":51006711,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":399,"moving_time":399,"start_date":"2013-04-23T17:36:25Z","start_date_local":"2013-04-23T19:36:25Z","distance":3235.5,"start_index":1000,"end_index":1072,"average_cadence":92.6,"device_watts":false,"average_watts":256.3,"average_heartrate":158.9,"max_heartrate":175.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":4401019682,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":187681356,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":399,"moving_time":399,"start_date":"2014-08-26T18:06:53Z","start_date_local":"2014-08-26T20:06:53Z","distance":3244.1,"start_index":943,"end_index":1014,"average_cadence":80.9,"device_watts":false,"average_watts":256.3,"average_heartrate":167.1,"max_heartrate":186.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588453028,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":10597446,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":401,"moving_time":401,"start_date":"2012-05-22T18:19:02Z","start_date_local":"2012-05-22T20:19:02Z","distance":3272.29,"start_index":899,"end_index":975,"average_cadence":85.1,"device_watts":false,"average_watts":256.4,"average_heartrate":164.8,"max_heartrate":184.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":13874453614,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":571898791,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":404,"moving_time":404,"start_date":"2016-05-10T18:14:21Z","start_date_local":"2016-05-10T20:14:21Z","distance":3261.3,"start_index":940,"end_index":1011,"average_cadence":80.7,"device_watts":false,"average_watts":244.2,"average_heartrate":155.5,"max_heartrate":181.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":8099099158,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":341142284,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":405,"moving_time":405,"start_date":"2015-07-07T18:15:49Z","start_date_local":"2015-07-07T20:15:49Z","distance":3284.4,"start_index":958,"end_index":1029,"average_cadence":90.0,"device_watts":false,"average_watts":257.8,"average_heartrate":172.2,"max_heartrate":185.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588196563,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":62825780,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":406,"moving_time":406,"start_date":"2013-06-25T18:07:23Z","start_date_local":"2013-06-25T20:07:23Z","distance":3257.1,"start_index":1006,"end_index":1085,"average_cadence":91.1,"device_watts":false,"average_watts":246.6,"average_heartrate":164.5,"max_heartrate":181.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":4228296866,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":180870643,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":406,"moving_time":406,"start_date":"2014-08-12T18:12:43Z","start_date_local":"2014-08-12T20:12:43Z","distance":3202.3,"start_index":889,"end_index":961,"device_watts":false,"average_watts":239.6,"average_heartrate":164.5,"max_heartrate":184.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588196436,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":61257455,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":409,"moving_time":409,"start_date":"2013-06-18T18:09:07Z","start_date_local":"2013-06-18T20:09:07Z","distance":3276.0,"start_index":1059,"end_index":1129,"average_cadence":86.1,"device_watts":false,"average_watts":239.7,"average_heartrate":146.7,"max_heartrate":177.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588449470,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":54199110,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":410,"moving_time":410,"start_date":"2013-05-14T18:11:26Z","start_date_local":"2013-05-14T20:11:26Z","distance":3242.3,"start_index":1035,"end_index":1107,"average_cadence":90.3,"device_watts":false,"average_watts":199.2,"average_heartrate":155.9,"max_heartrate":175.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":7065331301,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":300372820,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":410,"moving_time":410,"start_date":"2015-05-08T10:46:00Z","start_date_local":"2015-05-08T12:46:00Z","distance":3263.3,"start_index":1075,"end_index":1150,"average_cadence":89.1,"device_watts":false,"average_watts":244.9,"average_heartrate":160.4,"max_heartrate":178.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588450334,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":18052743,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":413,"moving_time":413,"start_date":"2012-06-12T18:27:22Z","start_date_local":"2012-06-12T20:27:22Z","distance":3244.07,"start_index":939,"end_index":1012,"device_watts":false,"average_watts":246.9,"average_heartrate":154.4,"max_heartrate":170.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":3330761644,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":145548131,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":413,"moving_time":413,"start_date":"2013-04-30T17:37:23Z","start_date_local":"2013-04-30T19:37:23Z","distance":3257.7,"start_index":993,"end_index":1061,"average_cadence":93.1,"device_watts":false,"average_watts":237.1,"average_heartrate":151.9,"max_heartrate":175.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588450375,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":18052769,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":417,"moving_time":417,"start_date":"2012-06-05T18:20:42Z","start_date_local":"2012-06-05T20:20:42Z","distance":3279.75,"start_index":933,"end_index":1002,"device_watts":false,"average_watts":255.2,"average_heartrate":169.7,"max_heartrate":185.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588452833,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":10159994,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":417,"moving_time":417,"start_date":"2012-06-05T18:20:45Z","start_date_local":"2012-06-05T20:20:45Z","distance":3264.73,"start_index":1859,"end_index":1998,"device_watts":false,"average_watts":267.5,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":7609222598,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":321961454,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":417,"moving_time":417,"start_date":"2015-06-09T18:22:46Z","start_date_local":"2015-06-09T20:22:46Z","distance":3271.2,"start_index":949,"end_index":1016,"average_cadence":85.4,"device_watts":false,"average_watts":234.8,"average_heartrate":158.9,"max_heartrate":177.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588450020,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":18052825,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":421,"moving_time":421,"start_date":"2012-05-13T11:28:26Z","start_date_local":"2012-05-13T13:28:26Z","distance":3282.97,"start_index":2096,"end_index":2166,"average_cadence":0.0,"device_watts":false,"average_watts":250.1,"average_heartrate":161.4,"max_heartrate":176.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":3850108348,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":165528097,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":421,"moving_time":421,"start_date":"2014-07-06T09:46:16Z","start_date_local":"2014-07-06T11:46:16Z","distance":3260.8,"start_index":1635,"end_index":1704,"device_watts":false,"average_watts":238.9,"average_heartrate":169.8,"max_heartrate":181.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":16826254272,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":686471217,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":421,"moving_time":421,"start_date":"2016-08-23T18:12:09Z","start_date_local":"2016-08-23T20:12:09Z","distance":3257.4,"start_index":1641,"end_index":1775,"average_cadence":85.7,"device_watts":false,"average_watts":232.7,"average_heartrate":172.9,"max_heartrate":182.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":3330943835,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":145554983,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":422,"moving_time":422,"start_date":"2013-06-04T18:12:26Z","start_date_local":"2013-06-04T20:12:26Z","distance":3273.4,"start_index":989,"end_index":1068,"average_cadence":90.0,"device_watts":false,"average_watts":234.4,"average_heartrate":161.5,"max_heartrate":174.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":14080342598,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":579339825,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":423,"moving_time":423,"start_date":"2016-05-17T18:14:59Z","start_date_local":"2016-05-17T20:14:59Z","distance":3267.4,"start_index":868,"end_index":945,"average_cadence":73.9,"device_watts":false,"average_watts":231.8,"average_heartrate":155.1,"max_heartrate":176.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588450303,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":18052719,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":428,"moving_time":428,"start_date":"2012-07-10T18:15:36Z","start_date_local":"2012-07-10T20:15:36Z","distance":3256.31,"start_index":309,"end_index":391,"device_watts":false,"average_watts":237.1,"average_heartrate":171.8,"max_heartrate":183.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588453450,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":9643480,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":429,"moving_time":429,"start_date":"2012-05-29T18:24:40Z","start_date_local":"2012-05-29T20:24:40Z","distance":3299.47,"start_index":1935,"end_index":2078,"device_watts":false,"average_watts":254.3,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":8690030955,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":364206246,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":433,"moving_time":433,"start_date":"2015-08-04T18:18:02Z","start_date_local":"2015-08-04T20:18:02Z","distance":3285.1,"start_index":896,"end_index":961,"average_cadence":87.1,"device_watts":false,"average_watts":223.3,"average_heartrate":158.7,"max_heartrate":177.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]},{"id":1588446088,"resource_state":2,"name":"Oude Kleefsebaan","activity":{"id":51006733,"resource_state":1},"athlete":{"id":549238,"resource_state":1},"elapsed_time":434,"moving_time":434,"start_date":"2013-04-16T17:41:19Z","start_date_local":"2013-04-16T19:41:19Z","distance":3228.3,"start_index":963,"end_index":1036,"average_cadence":92.1,"device_watts":false,"average_watts":219.2,"average_heartrate":163.8,"max_heartrate":183.0,"segment":{"id":5319561,"resource_state":2,"name":"Oude Kleefsebaan","activity_type":"Ride","distance":3286.6,"average_grade":2.1,"maximum_grade":10.9,"elevation_high":95.1,"elevation_low":24.0,"start_latlng":[51.805821,5.965334],"end_latlng":[51.818456,5.924323],"start_latitude":51.805821,"start_longitude":5.965334,"end_latitude":51.818456,"end_longitude":5.924323,"climb_category":0,"city":"Kranenburg","state":"NRW","country":"Germany","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[]}]
+2016-10-10 07:42:34,973 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 07:43:19,994 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 07:43:23,210 - stravamod - INFO - 30 Efforts found
+2016-10-10 07:44:25,527 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 07:44:32,239 - stravamod - INFO - 30 Efforts found
+2016-10-10 07:45:39,924 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 07:45:41,579 - stravamod - INFO - 30 Efforts found
+2016-10-10 07:47:23,152 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 07:47:24,577 - stravamod - INFO - 30 Efforts found
+2016-10-10 08:02:44,452 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 08:02:45,466 - stravamod - INFO - 30 Efforts found
+2016-10-10 08:02:45,466 - stravamod - DEBUG - 3330852149
+2016-10-10 08:02:45,466 - stravamod - DEBUG - 15609669406
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 1588450431
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 14344114347
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 14670424038
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 1588444750
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 1588446035
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 4401019682
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 1588453028
+2016-10-10 08:02:45,467 - stravamod - DEBUG - 13874453614
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 8099099158
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 1588196563
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 4228296866
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 1588196436
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 1588449470
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 7065331301
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 1588450334
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 3330761644
+2016-10-10 08:02:45,468 - stravamod - DEBUG - 1588450375
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 1588452833
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 7609222598
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 1588450020
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 3850108348
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 16826254272
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 3330943835
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 14080342598
+2016-10-10 08:02:45,469 - stravamod - DEBUG - 1588450303
+2016-10-10 08:02:45,470 - stravamod - DEBUG - 1588453450
+2016-10-10 08:02:45,470 - stravamod - DEBUG - 8690030955
+2016-10-10 08:02:45,470 - stravamod - DEBUG - 1588446088
+2016-10-10 08:07:29,882 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 08:07:30,998 - stravamod - INFO - 50 Efforts found
+2016-10-10 08:07:30,998 - stravamod - DEBUG - 3330852149
+2016-10-10 08:07:30,998 - stravamod - DEBUG - 15609669406
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 1588450431
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 14344114347
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 14670424038
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 1588444750
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 1588446035
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 4401019682
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 1588453028
+2016-10-10 08:07:30,999 - stravamod - DEBUG - 13874453614
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 8099099158
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 1588196563
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 4228296866
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 1588196436
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 1588449470
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 7065331301
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 1588450334
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 3330761644
+2016-10-10 08:07:31,000 - stravamod - DEBUG - 1588450375
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 1588452833
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 7609222598
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 1588450020
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 3850108348
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 16826254272
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 3330943835
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 14080342598
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 1588450303
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 1588453450
+2016-10-10 08:07:31,001 - stravamod - DEBUG - 8690030955
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 1588446088
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 1588191732
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 3059909072
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 1588191615
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 2702418111
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 3330761766
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 1588196440
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 1588196567
+2016-10-10 08:07:31,002 - stravamod - DEBUG - 15853471837
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 3330852338
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 7353659616
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 2379993426
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 1588449508
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 1588449989
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 7065329996
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 13492234022
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 17031271396
+2016-10-10 08:07:31,003 - stravamod - DEBUG - 1588450462
+2016-10-10 08:07:31,004 - stravamod - DEBUG - 3330944048
+2016-10-10 08:07:31,004 - stravamod - DEBUG - 11639276882
+2016-10-10 08:07:31,004 - stravamod - DEBUG - 4464528868
+2016-10-10 08:08:00,670 - stravamod - DEBUG - Getting efforts for the Holdeurn segment
+2016-10-10 08:08:01,419 - stravamod - INFO - 82 Efforts found
+2016-10-10 08:08:01,419 - stravamod - DEBUG - 3330852149
+2016-10-10 08:08:01,419 - stravamod - DEBUG - 15609669406
+2016-10-10 08:08:01,419 - stravamod - DEBUG - 1588450431
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 14344114347
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 14670424038
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 1588444750
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 1588446035
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 4401019682
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 1588453028
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 13874453614
+2016-10-10 08:08:01,420 - stravamod - DEBUG - 8099099158
+2016-10-10 08:08:01,421 - stravamod - DEBUG - 1588196563
+2016-10-10 08:08:01,421 - stravamod - DEBUG - 4228296866
+2016-10-10 08:08:01,421 - stravamod - DEBUG - 1588196436
+2016-10-10 08:08:01,421 - stravamod - DEBUG - 1588449470
+2016-10-10 08:08:01,421 - stravamod - DEBUG - 7065331301
+2016-10-10 08:08:01,421 - stravamod - DEBUG - 1588450334
+2016-10-10 08:08:01,421 - stravamod - DEBUG - 3330761644
+2016-10-10 08:08:01,422 - stravamod - DEBUG - 1588450375
+2016-10-10 08:08:01,422 - stravamod - DEBUG - 1588452833
+2016-10-10 08:08:01,422 - stravamod - DEBUG - 7609222598
+2016-10-10 08:08:01,422 - stravamod - DEBUG - 1588450020
+2016-10-10 08:08:01,422 - stravamod - DEBUG - 3850108348
+2016-10-10 08:08:01,422 - stravamod - DEBUG - 16826254272
+2016-10-10 08:08:01,422 - stravamod - DEBUG - 3330943835
+2016-10-10 08:08:01,423 - stravamod - DEBUG - 14080342598
+2016-10-10 08:08:01,423 - stravamod - DEBUG - 1588450303
+2016-10-10 08:08:01,423 - stravamod - DEBUG - 1588453450
+2016-10-10 08:08:01,423 - stravamod - DEBUG - 8690030955
+2016-10-10 08:08:01,423 - stravamod - DEBUG - 1588446088
+2016-10-10 08:08:01,423 - stravamod - DEBUG - 1588191732
+2016-10-10 08:08:01,423 - stravamod - DEBUG - 3059909072
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 1588191615
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 2702418111
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 3330761766
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 1588196440
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 1588196567
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 15853471837
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 3330852338
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 7353659616
+2016-10-10 08:08:01,424 - stravamod - DEBUG - 2379993426
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 1588449508
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 1588449989
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 7065329996
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 13492234022
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 17031271396
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 1588450462
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 3330944048
+2016-10-10 08:08:01,425 - stravamod - DEBUG - 11639276882
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 4464528868
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 9577461519
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 3330851709
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 12375885484
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 12375887249
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 1588191824
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 2702419658
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 4464529802
+2016-10-10 08:08:01,426 - stravamod - DEBUG - 2871272822
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 9198317311
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 1588196453
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 3330761448
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 2464227285
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 2120237680
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 7291339069
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 3330760671
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 10514901058
+2016-10-10 08:08:01,427 - stravamod - DEBUG - 2759407381
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 6437304883
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 2759407069
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 11153031216
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 6437305912
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 5841697233
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 12901327514
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 3551531123
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 3330944297
+2016-10-10 08:08:01,428 - stravamod - DEBUG - 10803803076
+2016-10-10 08:08:01,429 - stravamod - DEBUG - 2759399855
+2016-10-10 08:08:01,429 - stravamod - DEBUG - 5701838550
+2016-10-10 08:08:01,429 - stravamod - DEBUG - 2028184904
+2016-10-10 08:08:01,429 - stravamod - DEBUG - 2759406043
+2016-10-10 08:08:01,429 - stravamod - DEBUG - 3330851234
+2016-10-10 08:08:01,429 - stravamod - DEBUG - 2379993312
+2016-10-10 08:17:33,436 - stravamod - INFO - Getting efforts for the Holdeurn segment
+2016-10-10 08:21:04,102 - stravamod - INFO - Getting efforts for the Holdeurn segment
+2016-10-10 08:21:05,310 - stravamod - INFO - Segment name:Oude Kleefsebaan
+2016-10-10 08:21:05,310 - stravamod - INFO - 82 Efforts found
+2016-10-10 08:21:05,310 - stravamod - DEBUG - 3330852149
+2016-10-10 08:21:05,310 - stravamod - DEBUG - 15609669406
+2016-10-10 08:21:05,310 - stravamod - DEBUG - 1588450431
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 14344114347
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 14670424038
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 1588444750
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 1588446035
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 4401019682
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 1588453028
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 13874453614
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 8099099158
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 1588196563
+2016-10-10 08:21:05,311 - stravamod - DEBUG - 4228296866
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 1588196436
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 1588449470
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 7065331301
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 1588450334
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 3330761644
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 1588450375
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 1588452833
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 7609222598
+2016-10-10 08:21:05,312 - stravamod - DEBUG - 1588450020
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 3850108348
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 16826254272
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 3330943835
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 14080342598
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 1588450303
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 1588453450
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 8690030955
+2016-10-10 08:21:05,313 - stravamod - DEBUG - 1588446088
+2016-10-10 08:21:05,314 - stravamod - DEBUG - 1588191732
+2016-10-10 08:21:05,314 - stravamod - DEBUG - 3059909072
+2016-10-10 08:21:05,314 - stravamod - DEBUG - 1588191615
+2016-10-10 08:21:05,314 - stravamod - DEBUG - 2702418111
+2016-10-10 08:21:05,314 - stravamod - DEBUG - 3330761766
+2016-10-10 08:21:05,314 - stravamod - DEBUG - 1588196440
+2016-10-10 08:21:05,315 - stravamod - DEBUG - 1588196567
+2016-10-10 08:21:05,315 - stravamod - DEBUG - 15853471837
+2016-10-10 08:21:05,315 - stravamod - DEBUG - 3330852338
+2016-10-10 08:21:05,315 - stravamod - DEBUG - 7353659616
+2016-10-10 08:21:05,315 - stravamod - DEBUG - 2379993426
+2016-10-10 08:21:05,315 - stravamod - DEBUG - 1588449508
+2016-10-10 08:21:05,315 - stravamod - DEBUG - 1588449989
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 7065329996
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 13492234022
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 17031271396
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 1588450462
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 3330944048
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 11639276882
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 4464528868
+2016-10-10 08:21:05,316 - stravamod - DEBUG - 9577461519
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 3330851709
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 12375885484
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 12375887249
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 1588191824
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 2702419658
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 4464529802
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 2871272822
+2016-10-10 08:21:05,317 - stravamod - DEBUG - 9198317311
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 1588196453
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 3330761448
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 2464227285
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 2120237680
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 7291339069
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 3330760671
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 10514901058
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 2759407381
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 6437304883
+2016-10-10 08:21:05,318 - stravamod - DEBUG - 2759407069
+2016-10-10 08:21:05,319 - stravamod - DEBUG - 11153031216
+2016-10-10 08:21:05,319 - stravamod - DEBUG - 6437305912
+2016-10-10 08:21:05,319 - stravamod - DEBUG - 5841697233
+2016-10-10 08:21:05,319 - stravamod - DEBUG - 12901327514
+2016-10-10 08:21:05,319 - stravamod - DEBUG - 3551531123
+2016-10-10 08:21:05,319 - stravamod - DEBUG - 3330944297
+2016-10-10 08:21:05,319 - stravamod - DEBUG - 10803803076
+2016-10-10 08:21:05,320 - stravamod - DEBUG - 2759399855
+2016-10-10 08:21:05,320 - stravamod - DEBUG - 5701838550
+2016-10-10 08:21:05,320 - stravamod - DEBUG - 2028184904
+2016-10-10 08:21:05,320 - stravamod - DEBUG - 2759406043
+2016-10-10 08:21:05,320 - stravamod - DEBUG - 3330851234
+2016-10-10 08:21:05,320 - stravamod - DEBUG - 2379993312
+2016-10-10 08:23:09,324 - stravamod - INFO - Getting efforts for the Holdeurn segment
+2016-10-10 08:23:10,513 - stravamod - INFO - Segment name:Oude Kleefsebaan
+2016-10-10 08:23:10,514 - stravamod - INFO - 82 Efforts found
+2016-10-10 08:23:10,514 - stravamod - DEBUG - 3330852149
+2016-10-10 08:23:10,514 - stravamod - DEBUG - 15609669406
+2016-10-10 08:23:10,514 - stravamod - DEBUG - 1588450431
+2016-10-10 08:23:10,514 - stravamod - DEBUG - 14344114347
+2016-10-10 08:23:10,514 - stravamod - DEBUG - 14670424038
+2016-10-10 08:23:10,514 - stravamod - DEBUG - 1588444750
+2016-10-10 08:23:10,514 - stravamod - DEBUG - 1588446035
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 4401019682
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 1588453028
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 13874453614
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 8099099158
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 1588196563
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 4228296866
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 1588196436
+2016-10-10 08:23:10,515 - stravamod - DEBUG - 1588449470
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 7065331301
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 1588450334
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 3330761644
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 1588450375
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 1588452833
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 7609222598
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 1588450020
+2016-10-10 08:23:10,516 - stravamod - DEBUG - 3850108348
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 16826254272
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 3330943835
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 14080342598
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 1588450303
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 1588453450
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 8690030955
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 1588446088
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 1588191732
+2016-10-10 08:23:10,517 - stravamod - DEBUG - 3059909072
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 1588191615
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 2702418111
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 3330761766
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 1588196440
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 1588196567
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 15853471837
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 3330852338
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 7353659616
+2016-10-10 08:23:10,518 - stravamod - DEBUG - 2379993426
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 1588449508
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 1588449989
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 7065329996
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 13492234022
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 17031271396
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 1588450462
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 3330944048
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 11639276882
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 4464528868
+2016-10-10 08:23:10,519 - stravamod - DEBUG - 9577461519
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 3330851709
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 12375885484
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 12375887249
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 1588191824
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 2702419658
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 4464529802
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 2871272822
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 9198317311
+2016-10-10 08:23:10,520 - stravamod - DEBUG - 1588196453
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 3330761448
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 2464227285
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 2120237680
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 7291339069
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 3330760671
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 10514901058
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 2759407381
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 6437304883
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 2759407069
+2016-10-10 08:23:10,521 - stravamod - DEBUG - 11153031216
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 6437305912
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 5841697233
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 12901327514
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 3551531123
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 3330944297
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 10803803076
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 2759399855
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 5701838550
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 2028184904
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 2759406043
+2016-10-10 08:23:10,522 - stravamod - DEBUG - 3330851234
+2016-10-10 08:23:10,523 - stravamod - DEBUG - 2379993312
+2016-10-10 08:24:43,112 - stravamod - INFO - Getting efforts for the Holdeurn segment
+2016-10-10 08:24:44,287 - stravamod - INFO - Segment name:Oude Kleefsebaan
+2016-10-10 08:24:44,287 - stravamod - INFO - 82 Efforts found
