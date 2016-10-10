@@ -160,22 +160,22 @@ def writeDfToCsv(res):
     return
 
 
-def getStreamSegment(id, type):
+def getSegmentEffortStream(id, type):
     'Get a specific stream of a specific activity'
-
-    # url = urlbase + "/segments/" + str(id) + "/streams/distance"
-    # url = urlbase + "/segments/" + str(id) + "/streams/distance"
-    url = urlbase + "/segments/" + str(id) + "/streams/altitude"
+    # type can be distance, altitude or time
+    url = urlbase + "/segment_efforts/" + str(id) + "/streams/" + type
 
     params = dict(access_token=at, resolution='high')
     r = gf.getRequest(url, params)
-    print(r.text)
+    return r
+    # print(r.text)
 
 
 def getSegmentEfforts(id):
     'Get a specific stream of a specific activity'
-
-    logger.info("Getting efforts for the Holdeurn segment")
+    # need to add a function to retrieve more than 200 results in the future
+    logger.info(
+        "Getting efforts for the Holdeurn segment (hardcoded segment id)")
 
     url = urlbase + "/segments/" + str(id) + "/all_efforts"
 
@@ -184,10 +184,12 @@ def getSegmentEfforts(id):
     r = gf.getRequest(url, params)
     a = r.json()
     if (len(a) > 0):
-        logger.info("Segment name:" + a[0]['name'])
-        logger.info(str(len(a)) + " Efforts found")
-        # for i in range(len(a)):
-        #    logger.debug(a[i]["id"])
+        logger.info(
+            str(len(a)) + " Efforts found for segment name:" + a[0]['name'])
+        for i in range(2):
+            logger.debug(a[i]["id"])
+            req = getSegmentEffortStream(a[i]["id"], 'time')
+            logger.debug(req.text)
 
 
 def readDfFromCsv():
