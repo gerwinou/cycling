@@ -15,7 +15,7 @@ data2 <- read.csv(strava_effort2,sep=",",dec = ".",na.strings = "",header=T)
 #plot(data2$distance,type="l",col='green')
 #par(new=TRUE)
 plot(data2$altitude,type="l",
-     col='black',
+     col='darkgrey',
      xlab = "distance",
      ylab = "altitude",
      main = "Strava analysis",
