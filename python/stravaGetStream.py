@@ -17,7 +17,8 @@ at = (config.get("oAuth2", "oAuth2.accessToken"))
 def getStream(id):
     #sf.getStreamSegment(id, type)
     # sf.getSegmentEfforts(id)
-    sf.getSegmentEffortsBySpeed(id)
+    # sf.getSegmentDetails(id)
+    sf.getSegmentEffortsByType(id, 'heartrate')
 
 parser = argparse.ArgumentParser(
     description="This script gets Strava streams")

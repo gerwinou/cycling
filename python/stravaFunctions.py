@@ -203,6 +203,16 @@ def writeListStreamToCsv(file_name, list):
     return
 
 
+def getSegmentDetails(id):
+    'Get distance and altitude of a segment'
+    url = urlbase + "/segments/" + str(id) + "/streams/altitude"
+    params = dict(access_token=at, resolution='low')
+
+    r = gf.getRequest(url, params)
+    # logger.debug(r.text)
+    return r
+
+
 def getSegmentEffortStream(id, type):
     'Get a specific stream of a specific activity'
     # type can be distance, altitude or time
@@ -213,7 +223,7 @@ def getSegmentEffortStream(id, type):
     return r
     # print(r.text)
 
-
+'''
 def getSegmentEfforts(id):
     'Get multiple streams of a specific activity'
     # need to add a function to retrieve more than 200 results in the future
@@ -226,6 +236,8 @@ def getSegmentEfforts(id):
                   athlete_id=549238, per_page=200)
     r = gf.getRequest(url, params)
     # logger.debug(r.text)
+
+
     ac = r.json()
     if (len(ac) > 0):
         logger.info(
@@ -254,9 +266,10 @@ def getSegmentEfforts(id):
             e.insert(0, 'altitude')
 
             writeStreamToCsv(effortID + '.csv', a, b, c, d, e)
+'''
 
 
-def getSegmentEffortsBySpeed(id):
+def getSegmentEffortsByType(id, atype):
     'Get a specific stream (speed) of multiple efforts'
     # need to add a function to retrieve more than 200 results in the future
     logger.info(
@@ -264,12 +277,23 @@ def getSegmentEffortsBySpeed(id):
     #df = pd.DataFrame
     url = urlbase + "/segments/" + str(id) + "/all_efforts"
 
+    logger.info("Getting segment details")
+    d = getSegmentDetails(id)
+
+    dist = d.json()[0]["data"]
+    dist.insert(0, "distance")
+
+    alt = d.json()[1]["data"]
+    alt.insert(0, "altitude")
     params = dict(access_token=at, resolution='high',
                   athlete_id=549238, per_page=200)
     r = gf.getRequest(url, params)
     # logger.debug(r.text)
     ac = r.json()
-    list1 = []
+    aList = []
+    aList.append(dist)
+    aList.append(alt)
+
     if (len(ac) > 0):
         logger.info(
             str(len(ac)) + " Efforts found for segment name:" + ac[0]['name'])
@@ -278,14 +302,14 @@ def getSegmentEffortsBySpeed(id):
             logger.info(ac[i]['start_date'])
             effortID = str(ac[i]["id"])
             logger.debug("Effort id is : " + str(ac[i]["id"]))
-            req = getSegmentEffortStream(ac[i]["id"], 'velocity_smooth')
+            req = getSegmentEffortStream(ac[i]["id"], atype)
 
             result = req.json()[1]["data"]
-            result.insert(0, effortID)
+            result.insert(0, 'effort' + str(i))
 
-            list1.append(result)
+            aList.append(result)
 
-        writeListStreamToCsv(effortID + '.csv', list1)
+        writeListStreamToCsv(atype + '.csv', aList)
 
 
 def readDfFromCsv():
