@@ -1,7 +1,5 @@
 setwd("~/Documents/Data Analysis/")
-library(plyr)
 library(ggplot2)
-library(lubridate)
 
 strava_effort1 <-"data/cycling/speed2.csv"
 #data1 <- read.csv(strava_effort1,sep=",",dec = ".",na.strings = "",header=T)

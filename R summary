@@ -1,0 +1,64 @@
+Summary of data
+summary(df$column)
+
+dimensions of dataframe
+dim()
+
+Structure of dataframe
+str(df)
+
+Simple qplot
+qplot(displ,hwy,data=mpg) where the first are columns set to each other, and the third is the df
+qplot(displ,hwy,data=mpg, color=drive) adds a color per level based on a third column
+
+qplot(displ,hwy,data=mpg,color=drv, geom = c("point","smooth"))
+
+Plot only the hwy values
+qplot(y=hwy,data=mpg,color=drv)
+
+boxplot
+qplot(drv,hwy,data=mpg,geom="boxplot")
+
+by manufacturer
+qplot(drv,hwy,data=mpg,geom="boxplot",color=manufacturer)
+
+histogram
+qplot(hwy,data=mpg,fill=drv)
+
+scatterplot over three levels (horizontal alignment (facets)
+qplot(displ,hwy,data=mpg,facets =.~drv)
+
+histogram vertical alignment (facets)
+qplot(hwy,data=mpg,facets = drv~.,binwidth=2)
+
+qplot(displ, hwy, data = mpg, geom=c("point", "smooth"),facets=.~drv)
+
+Create a graphical object with ggplot (arguments in aes)
+g<-ggplot(mpg,aes(displ,hwy))
+you can do a summary on g
+
+g+geom_point() # prints it as scatteplot
+
++geom_smooth(method="lm") # changes the default regression line  and confidene band to linear mode instead of loess
+
+g+geom_point() +geom_smooth(method="lm") + facet_grid(. ~ drv) # with facets
++ ggtitle("Swirl Rules!")
+
+g+geom_point(color="pink",size=4,alpha=1/2) +geom_smooth(method="lm") + facet_grid(. ~ drv) + ggtitle("Swirl Rules!")
+g+geom_point(size=4,alpha=1/2,aes(color=drv))
+
+g + geom_point(aes(color = drv)) + labs(title="Swirl Rules!") + labs(x="Displacement", y="Hwy Mileage")
+
+g + geom_point(aes(color = drv),size=2, alpha = 1/2) + geom_smooth(size=4,linetype=3,method="lm",se=FALSE)
+
+g + geom_point(aes(color = drv)) + theme_bw(base_family = "Times")
+
+plot(myx,myy,type="l",ylim=c(-3,3))
+g<-ggplot(testdat,aes(x=myx,y=myy))
+g+ geom_line()
+
+g+geom_line() + ylim(-3,3)
+
+
+Play with random data
+[insert here]
