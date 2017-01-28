@@ -10,6 +10,9 @@ import base64
 # TODO: - generalize requests
 # TODO: - handle refresh action; reset the AT en RT within
 
+# Make sure locales have been exported correctly:
+# export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
 logging.config.fileConfig('fitbitlogging.conf')
 logger = logging.getLogger('fitbitClient')
 
@@ -34,7 +37,7 @@ rt = config.get('general', 'rt')
 def resetValue():
     # auth=HTTPBasicAuth('user', 'pass')
 
-    headers = {'Authorization': ' Basic MjI3U1RHOjIxZGRmNWRiNTU5NTFiY2ViZTY4OWU1MGZjYWFjOThj',
+    headers = {'Authorization': 'Basic MjI3U1RHOjIxZGRmNWRiNTU5NTFiY2ViZTY4OWU1MGZjYWFjOThj',
                'Content-Type': 'application/x-www-form-urlencoded'}
     data = {'grant_type': 'refresh_token',
             'refresh_token': rt}
@@ -79,8 +82,8 @@ def testAccess():
             exit()
     j = json.loads(r.text)
 
-    logger.debug(j['user']['fullName'])
-    logger.debug(j['user']['topBadges'][0]['name'])
+    #logger.debug(j['user']['fullName'])
+    #logger.debug(j['user']['topBadges'][0]['name'])
 
 
 def getHeartbeat():
