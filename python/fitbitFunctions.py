@@ -98,11 +98,22 @@ def getHeartbeat():
 
     logger.debug(j)
 
+def getHeartbeatSeries(start,end):
+    accessToken = at
+    # headers = {'Authorization': 'Bearer ' + accesstoken}
+    headers = {'Authorization': 'Bearer ' + at}
+    url = 'https://api.fitbit.com/1/user/-/activities/heart/date/' + start + '/' + end + '.json'
+
+    r = requests.get(url, headers=headers)
+    logger.debug(r.status_code)
+    #return json.loads(r.text)
+    return r.text
+
+    #logger.debug(j)
 
 def main():
-    testAccess()
-    getHeartbeat()
 
+    testAccess()
 
 if __name__ == "__main__":
-    main()
+        main()
