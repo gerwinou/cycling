@@ -33,8 +33,8 @@ logger.debug("tokenfile to be used: " + tokenfile)
 at = config.get('general', 'at')
 rt = config.get('general', 'rt')
 
-username = props.get('oauth2','username')
-password = props.get('oauth2','password')
+username = props.get('oauth2','clientID')
+password = props.get('oauth2','clientSecret')
 
 authHeader = base64.b64encode(username + ':' + password)
 logger.debug(authHeader)
