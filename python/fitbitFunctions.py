@@ -33,11 +33,16 @@ logger.debug("tokenfile to be used: " + tokenfile)
 at = config.get('general', 'at')
 rt = config.get('general', 'rt')
 
+username = props.get('oauth2','username')
+password = props.get('oauth2','password')
+
+authHeader = base64.b64encode(username + ':' + password)
+logger.debug(authHeader)
 
 def resetValue():
     # auth=HTTPBasicAuth('user', 'pass')
 
-    headers = {'Authorization': 'Basic MjI3U1RHOjIxZGRmNWRiNTU5NTFiY2ViZTY4OWU1MGZjYWFjOThj',
+    headers = {'Authorization': 'Basic ' + authHeader,
                'Content-Type': 'application/x-www-form-urlencoded'}
     data = {'grant_type': 'refresh_token',
             'refresh_token': rt}
