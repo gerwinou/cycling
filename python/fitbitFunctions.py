@@ -5,6 +5,7 @@ import os.path
 import logging
 import logging.config
 import json
+import csv
 import base64
 
 # TODO: - generalize requests
@@ -13,6 +14,10 @@ import base64
 # Make sure locales have been exported correctly:
 # export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
+
+
+
+
 logging.config.fileConfig('fitbitlogging.conf')
 logger = logging.getLogger('fitbitClient')
 
@@ -29,7 +34,6 @@ config.read(tokenfile)
 logger.debug("Configfile to be used: " + propfile)
 logger.debug("tokenfile to be used: " + tokenfile)
 
-
 at = config.get('general', 'at')
 rt = config.get('general', 'rt')
 
@@ -37,7 +41,6 @@ username = props.get('oauth2','clientID')
 password = props.get('oauth2','clientSecret')
 
 authHeader = base64.b64encode(username + ':' + password)
-logger.debug(authHeader)
 
 def resetValue():
     # auth=HTTPBasicAuth('user', 'pass')
@@ -87,12 +90,8 @@ def testAccess():
             exit()
     j = json.loads(r.text)
 
-    #logger.debug(j['user']['fullName'])
-    #logger.debug(j['user']['topBadges'][0]['name'])
-
-
 def getHeartbeat():
-
+    'gets todays heartbeat'
     accesstoken = at
     headers = {'Authorization': 'Bearer ' + accesstoken}
     url = 'https://api.fitbit.com/1/user/-/activities/heart/date/today/1d.json'
@@ -103,21 +102,103 @@ def getHeartbeat():
 
     logger.debug(j)
 
-def getHeartbeatSeries(start,end):
-    accessToken = at
+def getHeartbeatS(s,e):
+
+    outfile = props.get('output','hrfile')
+
+    sep = ":"
+    # accessToken = at
     # headers = {'Authorization': 'Bearer ' + accesstoken}
     headers = {'Authorization': 'Bearer ' + at}
-    url = 'https://api.fitbit.com/1/user/-/activities/heart/date/' + start + '/' + end + '.json'
+    reqUrl = 'https://api.fitbit.com/1/user/-/activities/heart/date/' + s + '/' + e + '.json'
 
-    r = requests.get(url, headers=headers)
+    r = requests.get(reqUrl, headers=headers)
     logger.debug(r.status_code)
     #return json.loads(r.text)
-    return r.text
+    #return r.text
+    a = json.loads(r.text)
+    logger.debug(a)
 
-    #logger.debug(j)
+    lengte = len(a["activities-heart"])
+
+    dt  = "NV"
+    rhr = "NV"
+    #zone0_name = "Out of Range"
+    zone0_caloriesOut = "NV"
+    zone0_minutes = "NV"
+
+    #zone0_name = "Fat Burn"
+    zone1_caloriesOut = "NV"
+    zone1_minutes = "NV"
+
+    #zone0_name = "Cardio"
+    zone2_caloriesOut = "NV"
+    zone2_minutes = "NV"
+
+    #zone0_name = "Peak"
+    zone3_caloriesOut = "NV"
+    zone3_minutes = "NV"
+
+    with open(outfile,'wb') as csvfile:
+        fieldnames = ['date','resthr','zone0Cal','zone0Min','zone0Cal','zone1Cal','zone1Min','zone2Cal','zone2Min','zone3Cal','zone3Min']
+        writer = csv.writer(csvfile,delimiter=sep)
+        writer.writerow(fieldnames)
+        for i in range(lengte):
+            dt  = a["activities-heart"][i]["dateTime"]
+
+            try:
+                rhr = a["activities-heart"][i]['value']["restingHeartRate"]
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone0_caloriesOut = int(a["activities-heart"][i]["value"]["heartRateZones"][0]["caloriesOut"])
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone0_minutes = a["activities-heart"][i]["value"]["heartRateZones"][0]["minutes"]
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone1_caloriesOut = int(a["activities-heart"][i]["value"]["heartRateZones"][1]["caloriesOut"])
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone1_minutes = a["activities-heart"][i]["value"]["heartRateZones"][1]["minutes"]
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone2_caloriesOut = int(a["activities-heart"][i]["value"]["heartRateZones"][2]["caloriesOut"])
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone2_minutes = a["activities-heart"][i]["value"]["heartRateZones"][2]["minutes"]
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone3_caloriesOut = int(a["activities-heart"][i]["value"]["heartRateZones"][3]["caloriesOut"])
+            except KeyError as e:
+                logger.debug(e)
+
+            try:
+                zone3_minutes = a["activities-heart"][i]["value"]["heartRateZones"][3]["minutes"]
+            except KeyError as e:
+                logger.debug(e)
+
+            resultstring = dt,str(rhr),str(zone0_caloriesOut),str(zone0_minutes),str(zone1_caloriesOut),str(zone1_minutes),str(zone2_caloriesOut),str(zone2_minutes),str(zone3_caloriesOut),str(zone3_minutes)
+            #print (dt + ":" + str(rhr) + ":" + str(zone0_caloriesOut) + ":" + str(zone0_minutes))
+            writer.writerow(resultstring)
+            #print(resultstring)
+
 
 def main():
-
+    loggerConfig()
     testAccess()
 
 if __name__ == "__main__":
