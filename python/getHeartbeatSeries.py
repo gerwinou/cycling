@@ -3,8 +3,8 @@ import json
 import logging
 import argparse
 
-start = '2016-01-22'
-end = '2016-01-31'
+start = '2016-02-01'
+end = '2016-02-28'
 
 logging.config.fileConfig('fitbitlogging.conf')
 logger = logging.getLogger('fitbitClient')
