@@ -140,7 +140,7 @@ def getHeartbeatS(s,e):
     zone3_minutes = "NV"
 
     with open(outfile,'wb') as csvfile:
-        fieldnames = ['date','resthr','zone0Cal','zone0Min','zone0Cal','zone1Cal','zone1Min','zone2Cal','zone2Min','zone3Cal','zone3Min']
+        fieldnames = ['date','resthr','zone0Cal','zone0Min','zone1Cal','zone1Min','zone2Cal','zone2Min','zone3Cal','zone3Min']
         writer = csv.writer(csvfile,delimiter=sep)
         writer.writerow(fieldnames)
         for i in range(lengte):
@@ -192,13 +192,12 @@ def getHeartbeatS(s,e):
                 logger.debug(e)
 
             resultstring = dt,str(rhr),str(zone0_caloriesOut),str(zone0_minutes),str(zone1_caloriesOut),str(zone1_minutes),str(zone2_caloriesOut),str(zone2_minutes),str(zone3_caloriesOut),str(zone3_minutes)
-            #print (dt + ":" + str(rhr) + ":" + str(zone0_caloriesOut) + ":" + str(zone0_minutes))
+            
             writer.writerow(resultstring)
             #print(resultstring)
 
 
 def main():
-    loggerConfig()
     testAccess()
 
 if __name__ == "__main__":
