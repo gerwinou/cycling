@@ -33,25 +33,36 @@ multiplot <- function(..., plotlist=NULL, cols) {
 
 
 # declare the file to read
-hr1 <-"heartbeat.csv" 
-hr2 <-"heartbeat2.csv" 
-
+hr1 <-"heartbeat3.csv" 
 
 # read it in as a dataset
 hrset1 <- read.csv(hr1,sep=":",dec = ".",na.strings = "NV",header=T) 
-hrset2 <- read.csv(hr2,sep=":",dec = ".",na.strings = "NV",header=T) 
 
-# subset only the desired data (calories per zone)
-x1 <-hrset1[,c("date","zone3Cal","zone2Cal","zone1Cal","zone0Cal")]
-x2 <-hrset2[,c("date","zone3Cal","zone2Cal","zone1Cal","zone0Cal")]
+# Define the date field as a date in the correct format
+hrset1$date <-as.Date( hrset1$date, format="%Y-%m-%d")
+
+# discard unneeded columns by keeping the needed ones, and putting them in the right order
+y1 <-hrset1[,c("date","zone3Cal","zone2Cal","zone1Cal","zone0Cal")]
 
 # melt the data to get the desired long format
-res1 <-melt(x1,variable.name = "Zone",value.name = "Calories")
-res2 <-melt(x2,variable.name = "Zone",value.name = "Calories")
+res1 <-melt(y1,id.vars = c("date"),variable.name = "Zone",value.name = "Calories")
+
+# subset the data into separate sets per month
+x1 <-res1[format.Date(res1$date,"%m")=="01",]
+x2 <-res1[format.Date(res1$date,"%m")=="02",]
+x5 <-res1[format.Date(res1$date,"%m")=="05",]
+
+#x1 <-hrset1[format.Date(hrset1$date,"%m")=="01",c("date","zone3Cal","zone2Cal","zone1Cal","zone0Cal")]
+#x2 <-hrset1[format.Date(hrset1$date,"%m")=="02",c("date","zone3Cal","zone2Cal","zone1Cal","zone0Cal")]
+
+# melt the data to get the desired long format
+#res1 <-melt(x1,id.vars = c("date"),variable.name = "Zone",value.name = "Calories")
+#res2 <-melt(x2,id.vars = c("date"),variable.name = "Zone",value.name = "Calories")
+
+# plot as a stacked plot, per month
+p1 <-ggplot() + geom_col(aes(y=Calories,x=format(date, "%d"),fill =Zone),data=x1)
+p2 <-ggplot() + geom_col(aes(y=Calories,x=format(date,"%d"),fill =Zone),data=x2)
+p5 <-ggplot() + geom_col(aes(y=Calories,x=format(date,"%d"),fill =Zone),data=x5)
 
 
-# plot as a stacked plot
-p1 <-ggplot() + geom_col(aes(y=Calories,x=date,fill =Zone),data=res1)
-p2 <-ggplot() + geom_col(aes(y=Calories,x=date,fill =Zone),data=res2)
-
-multiplot(p1, p2, cols=2)
+multiplot(p1, p2, p5,cols=2)
