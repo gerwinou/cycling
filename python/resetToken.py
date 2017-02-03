@@ -18,7 +18,7 @@ def main():
     startP()
 
 parser = argparse.ArgumentParser(
-    description="This script gets the heartbeat from begin to end .")
+    description="This script gets a new access and refresh token from fitbit.")
 
 script_version = "0.1"
 
