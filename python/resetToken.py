@@ -10,12 +10,12 @@ logging.config.fileConfig('fitbitlogging.conf')
 logger = logging.getLogger('fitbitClient')
 sep = ":"
 
-def startP(start,end):
-    f.getHeartbeatS(start, end)
-
+def startP():
+    res = f.resetValue()
+    logger.debug(res.text)
 
 def main():
-    startP(start,end)
+    startP()
 
 parser = argparse.ArgumentParser(
     description="This script gets the heartbeat from begin to end .")

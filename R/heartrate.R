@@ -33,7 +33,7 @@ multiplot <- function(..., plotlist=NULL, cols) {
 
 
 # declare the file to read
-hr <-"heartbeat3.csv" 
+hr <-"heartbeat.csv" 
 
 # read it in as a dataset
 hrset <- read.csv(hr,sep=":",dec = ".",na.strings = "NV",header=T) 
@@ -51,6 +51,7 @@ res <-melt(y,id.vars = c("date"),variable.name = "Zone",value.name = "Calories")
 x1 <-res[format.Date(res$date,"%m")=="01",]
 x2 <-res[format.Date(res$date,"%m")=="02",]
 x3 <-res[format.Date(res$date,"%m")=="03",]
+x4 <-res[format.Date(res$date,"%m")=="04",]
 x5 <-res[format.Date(res$date,"%m")=="05",]
 
 # plot as a stacked plot, per month
@@ -63,9 +64,11 @@ p2 <-p2 + labs(x = "February")
 p3 <-ggplot() + geom_col(aes(y=Calories,x=format(date,"%d"),fill =Zone),data=x3)
 p3 <-p3 + labs(x = "March")
 
+p4 <-ggplot() + geom_col(aes(y=Calories,x=format(date,"%d"),fill =Zone),data=x4)
+p4 <-p4 + labs(x = "April")
 
 p5 <-ggplot() + geom_col(aes(y=Calories,x=format(date,"%d"),fill =Zone),data=x5)
 p5 <-p5 + labs(x = "May")
 
 
-multiplot(p1, p2, p3, p5,cols=2)
+multiplot(p1, p2, p3, p4, p5,cols=2)

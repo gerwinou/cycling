@@ -55,6 +55,7 @@ def resetValue():
     logger.debug(r.status_code)
     logger.debug(r.text)
 
+
     j = json.loads(r.text)
     newAT = j['access_token']
     newRT = j['refresh_token']
@@ -71,6 +72,7 @@ def resetValue():
     with open(tokenfile, 'w') as f:
         newConfig.write(f)
 
+    return r
 
 def testAccess():
 
@@ -192,7 +194,7 @@ def getHeartbeatS(s,e):
                 logger.debug(e)
 
             resultstring = dt,str(rhr),str(zone0_caloriesOut),str(zone0_minutes),str(zone1_caloriesOut),str(zone1_minutes),str(zone2_caloriesOut),str(zone2_minutes),str(zone3_caloriesOut),str(zone3_minutes)
-            
+
             writer.writerow(resultstring)
             #print(resultstring)
 
