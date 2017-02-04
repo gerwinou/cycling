@@ -15,9 +15,6 @@ import base64
 # export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
 
-
-
-
 logging.config.fileConfig('fitbitlogging.conf')
 logger = logging.getLogger('fitbitClient')
 
