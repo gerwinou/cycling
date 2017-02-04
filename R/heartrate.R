@@ -4,16 +4,19 @@ library(reshape2)
 library(plyr)
 
 # using a custom function from the file below for multiplotting
+# putting function in file can be done with dump
 source("myFunctions.R")
 
 # declare the file to read
 hr <-"heartbeat.csv" 
 
-# read it in as a dataset
-hrset <- read.csv(hr,sep=":",dec = ".",na.strings = "NV",header=T) 
+# read it in as a dataset, define date as Date, and all else as numeric. colClasses is not ideal, look for alt.
+hrset <- read.csv(hr,sep=":",dec = ".",na.strings = "NV",header=T,colClasses=c('Date',rep('numeric',9)))
+#hrset <- read.csv(hr,sep=":",dec = ".",na.strings = "NV",header=T) 
+
 
 # Define the date field as a date in the correct format
-hrset$date <-as.Date( hrset$date, format="%Y-%m-%d")
+# hrset$date <-as.Date( hrset$date, format="%Y-%m-%d")
 
 # discard unneeded columns by keeping the needed ones, and putting them in the right order
 y <-hrset[,c("date","zone3Cal","zone2Cal","zone1Cal","zone0Cal")]
