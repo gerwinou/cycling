@@ -6,7 +6,8 @@ library(lubridate)
 garminReport <-"data/cycling/activities.csv"
 temp <- read.csv(garminReport,sep=";",dec = ",",na.strings = "",header=T)
 
-p;temp$BeginTimestamp<-as.Date(temp$BeginTimestamp)
+#data$BeginTimestamp<-as.Date(data$BeginTimestamp)
+temp$BeginTimestamp<-as.Date(temp$BeginTimestamp)
 data<-temp[order(temp$BeginTimestamp),]
 data$Date <- as.Date(data$BeginTimestamp)
 cumu <- ddply(data,.(year(Date)),transform, cumDistance = cumsum(Distance))
@@ -21,5 +22,4 @@ p <- p + ggtitle("Cumulated distance, per year")
 p <- p + scale_color_discrete(name = "Legend (Year)")
 p <- p + scale_y_continuous(breaks=seq(round(min(cumu$cumDistance)),round(max(cumu$cumDistance)),1000))  # Ticks from min to max, every 1
 
-p
 
