@@ -56,7 +56,7 @@ def getRequest(reqUrl, params):
     #logger.debug("---" + inspect.stack()[0][3])
 
     r = requests.get(reqUrl, params)
-
+    logger.debug("requestedURL: " + reqUrl)
     if (r.status_code == 200):
         logger.debug("Ok (200)")
         logger.debug(r.text)

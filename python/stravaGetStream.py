@@ -19,6 +19,7 @@ def getStream(id):
     # sf.getSegmentEfforts(id)
     # sf.getSegmentDetails(id)
     sf.getSegmentEffortsByType(id, 'heartrate')
+    #sf.getSegmentEffortsByType(id, 'velocity_smooth')
 
 parser = argparse.ArgumentParser(
     description="This script gets Strava streams")

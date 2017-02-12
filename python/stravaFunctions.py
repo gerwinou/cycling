@@ -11,7 +11,7 @@ import logging.config
 import genericFunctions as gf
 import csv
 import itertools
-from itertools import zip_longest
+from itertools import izip_longest as zip_longest
 
 logging.config.fileConfig('./etc/logging.conf')
 logger = logging.getLogger('stravamod')
@@ -298,17 +298,23 @@ def getSegmentEffortsByType(id, atype):
         logger.info(
             str(len(ac)) + " Efforts found for segment name:" + ac[0]['name'])
         # for i in range(len(a)):
-        for i in range(0, 2):
+        for i in range(len(ac)):
             logger.info(ac[i]['start_date'])
             effortID = str(ac[i]["id"])
             logger.debug("Effort id is : " + str(ac[i]["id"]))
+            # here we should catch the error when data is not available
             req = getSegmentEffortStream(ac[i]["id"], atype)
-
-            result = req.json()[1]["data"]
-            result.insert(0, 'effort' + str(i))
-
-            aList.append(result)
-
+            tmpjson = req.json()
+            logger.debug("length: " + str(len(tmpjson)))
+            if (len(tmpjson)>1):
+                result = req.json()[1]["data"]
+                #logger.debug("Result: " + str(result))
+                #result.insert(0, 'effort' + str(i))
+                result.insert(0, effortID)
+                aList.append(result)
+            else:
+                continue
+            
         writeListStreamToCsv(atype + '.csv', aList)
 
 
