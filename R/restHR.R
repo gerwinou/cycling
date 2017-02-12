@@ -3,9 +3,12 @@ library(ggplot2)
 library(reshape2)
 library(plyr)
 library(gridExtra)
+library(lubridate)
+
 # using a custom function from the file below for multiplotting
 # putting function in file can be done with dump
-#source("myFunctions.R")
+# function is deprecated however because of the use of gridExtra
+source("myFunctions.R")
 
 # declare the file to read
 hr2 <-"heartbeat.csv" 
@@ -33,7 +36,10 @@ plotter <-
   }
 
 # subset the data into separate sets per month
-#lijst = c("01","02","03","04","05","06","07","08","09","10","11","12")
+lijst <- c("01","02","03","04","05","06","07","08","09","10","11","12")# attempt to put everything in a loop (failed so far)
+
+  
+
 
 y1 = subSetter(hrset2,"01")
 y2 = subSetter(hrset2,"02")
