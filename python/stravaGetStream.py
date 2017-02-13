@@ -18,7 +18,7 @@ def getStream(id):
     #sf.getStreamSegment(id, type)
     # sf.getSegmentEfforts(id)
     # sf.getSegmentDetails(id)
-    sf.getSegmentEffortsByType(id, 'heartrate')
+    sf.getSegmentEffortsByType(id, 'altitude')
     #sf.getSegmentEffortsByType(id, 'velocity_smooth')
 
 parser = argparse.ArgumentParser(

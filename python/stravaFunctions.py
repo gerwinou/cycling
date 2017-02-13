@@ -218,7 +218,7 @@ def getSegmentEffortStream(id, type):
     # type can be distance, altitude or time
     url = urlbase + "/segment_efforts/" + str(id) + "/streams/" + type
 
-    params = dict(access_token=at, resolution='high')
+    params = dict(access_token=at, resolution='high', series_type='distance')
     r = gf.getRequest(url, params)
     return r
     # print(r.text)
@@ -283,7 +283,11 @@ def getSegmentEffortsByType(id, atype):
     dist = d.json()[0]["data"]
     dist.insert(0, "distance")
 
+    logger.debug(dist)
+
     alt = d.json()[1]["data"]
+    
+    logger.debug(alt)
     alt.insert(0, "altitude")
     params = dict(access_token=at, resolution='high',
                   athlete_id=549238, per_page=200)
@@ -298,18 +302,18 @@ def getSegmentEffortsByType(id, atype):
         logger.info(
             str(len(ac)) + " Efforts found for segment name:" + ac[0]['name'])
         # for i in range(len(a)):
-        for i in range(len(ac)):
+        # for i in range(len(ac)):
+        for i in range(0, 30):
             logger.info(ac[i]['start_date'])
             effortID = str(ac[i]["id"])
             logger.debug("Effort id is : " + str(ac[i]["id"]))
             # here we should catch the error when data is not available
             req = getSegmentEffortStream(ac[i]["id"], atype)
-            tmpjson = req.json()
-            logger.debug("length: " + str(len(tmpjson)))
-            if (len(tmpjson)>1):
+           
+            logger.debug(req.json()[0]["data"])
+            if (len(req.json())>1):
                 result = req.json()[1]["data"]
-                #logger.debug("Result: " + str(result))
-                #result.insert(0, 'effort' + str(i))
+                logger.debug("Result: " + str(result))
                 result.insert(0, effortID)
                 aList.append(result)
             else:
